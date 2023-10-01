@@ -1,0 +1,238 @@
+/*
+Theme Name : UpshotMedia
+Text Domain: UpshotMedia
+Version: 1.0
+Description: The first specially my Theme
+Tags: responsive, fast,Best for Company, Introducing Website
+Author: saaed.amini@gmail.com
+Author URI: saaed.amini@gmail.com
+*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    list-style-type: none ;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+h1{
+    font-size: 56px !important;
+}
+.headsection{
+    background-image: url(wp-content/themes/upshotmedia/assets/images/fidel-fernando-g8ldvfgv2e-unsplash-1-1078x720.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 0;
+}
+.headermenu{
+    position: relative !important;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.overlay{
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.navbar-brand img{
+    height: 3.8rem;
+    margin-left: 3rem;
+}
+.menubar{
+    margin-right: 3rem;
+}
+.menubar li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-left: 20px;
+}
+.menubar li a:hover{
+    color: lightgray;
+}
+.menubar-text{
+    margin-top: 40vh !important;  
+}
+.menubar-text h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+button{
+    letter-spacing: 1px;
+    width: 250px;
+    padding: 10px !important;
+}
+.bg-purple{
+    background-color: #351D4C;
+}
+#covid{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bg-siah{
+    background-color: #000000;
+}
+.bg-gradiant{
+    background: linear-gradient(to right, #000000 0%, #000000 30%, #220b38 30%, #220b38 100%);
+    overflow: hidden !important;
+}
+.sectionheight{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+#aboutustext{
+    width: 900px;
+    margin: auto;
+}
+.img-figur{
+    width: 100%;
+}
+.img-figur img{
+    width: 550px;
+    display: block;
+    margin: auto;
+}
+.img-figurdark{
+    width: 100%;
+}
+.img-figurdark img{
+    width: 600px;
+    display: block;
+    margin: auto;
+}
+.siah-section{
+    padding: 50px 0 50px 0;
+}
+.bg-carosel{
+    background: #220b38;
+    padding: 50px 0 50px 0;
+}
+.splide__slide img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.splide__pagination{
+    display: none !important;
+}
+input{
+    padding: 15px !important;
+}
+textarea{
+    width: 100%;
+    border-radius: 5px;
+}
+#fromwidth{
+    max-width: 600px;
+    margin: auto;
+}
+.astyle{
+    text-decoration: none;
+    color: #c0addf;
+}
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 48px !important;
+    }
+    .navbar-brand img{
+        margin-left: 0.2rem;
+    }
+    .menubardiv{
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        text-align: center;
+        background: black !important;
+        display: none;
+    } 
+    .menubar{
+        margin: 0;
+    }
+    .menubar li{
+        padding-bottom: 10px;
+    }
+    .hamburger{
+        height: 45px;
+        width: 50px;
+        /* display: block; */
+        /* padding: 10px 10px; */
+        position: relative;
+    } 
+    .hamburger span{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        border-radius: 20px;
+        background-color: white;
+        transition: 0.3s;
+        right: 10px;
+    }
+    .hamburger span:nth-child(1){
+        top: 0;
+    }
+    .hamburger span:nth-child(2){
+        top: 10px;
+    }
+    .hamburger span:nth-child(3){
+        top: 20px;
+    }
+    .bar1{
+        transform: rotate(-135deg) ;
+        top: 20px !important;
+    }
+    .bar2{
+        transform: translateX(135px) ;
+        opacity: 0;
+    }
+    .bar3{
+        transform: rotate(135deg) ;
+        top: 20px !important;
+    }
+    .menushow{
+        display: block;
+        transition: 0.3s;
+    }
+    .b-color{
+        background: black;
+    }
+    .menubar-text h1{
+        font-size: 34px;
+    }
+    .menubar-text h2{
+        font-size: 20px;
+    }
+    .bg-gradiant{
+        background: #220B38;
+    }
+    .img-figur img {
+        width: 300px;
+        margin: auto;
+        display: block;
+    }
+    .img-figurdark img{
+        width: 300px;
+        display: block;
+        margin: auto;
+    }
+}
+/* //page style */
+ .titlesection{
+    width: 100%;
+    height: 30vh;
+    background-color: #351D4C;
+    text-align: center;
+ }
+ .titlesection h1{
+    margin-top: 100px;
+ }

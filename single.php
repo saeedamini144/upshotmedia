@@ -1,23 +1,30 @@
 <?php
     get_header();
 ?>
-<section class="titlesection">
-    <div class="row">
+<section class="titlesection ">
+    <div class="">
         <div class="container">
             <h1><?php the_title( );?></h1>
+            <div>
+                <span class="date"><?php echo the_date()?> </span>
+                <span class="fa fa-tag"><?php echo the_tags()?></span>
+                <span class="breadcrumb"><?php echo the_category()?></span>
+            </div>
         </div>
     </div>
 </section>
-<?php
-    if(have_posts(  )){
-        while(have_posts(  )){
-            the_post(  );
-            // the_content(  );
-            // the_post_thumbnail(  );
-            get_template_part( 'template-parts/content' , 'article' );
+<div class="container">
+    <?php
+        if(have_posts(  )){
+            while(have_posts(  )){
+                the_post(  );
+                // the_content(  );
+                // the_post_thumbnail(  );
+                get_template_part( 'template-parts/content' , 'article' );
+            }
         }
-    }
-?>
+    ?>
+</div>
 <?php
     get_footer();
 ?>

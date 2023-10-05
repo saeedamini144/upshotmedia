@@ -6,9 +6,9 @@
         <div class="container">
             <h1><?php the_title( );?></h1>
             <div>
-                <span class="date"><?php echo the_date()?> </span>
-                <span class="fa fa-tag"><?php echo the_tags()?></span>
-                <span class="breadcrumb"><?php echo the_category()?></span>
+                <span class="date text-light"><?php  the_date(); ?> </span>
+                <span class="fa-tag text-light"><?php  the_tags("<span>the tags: " , " </span>"); ?></span>
+                <span class=""><?php  the_category(); ?></span>
             </div>
         </div>
     </div>

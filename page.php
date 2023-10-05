@@ -2,7 +2,7 @@
     get_header();
 ?>
 <section class="titlesection">
-    <div class="row">
+    <div class="">
         <div class="container">
             <h1><?php the_title( );?></h1>
         </div>

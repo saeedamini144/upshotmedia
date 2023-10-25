@@ -26,6 +26,9 @@
             }
         ?>
     </div>
+    <?php
+        the_posts_pagination(  );
+    ?>
 </section>
 <?php
     get_footer();

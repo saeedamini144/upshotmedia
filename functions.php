@@ -35,4 +35,20 @@
         wp_enqueue_script('upshotmedia-mainjs', get_template_directory_uri() . '/assets/javascripts/main.js' , array() ,"1.0" , true );
     }
     add_action("wp_enqueue_scripts", "upshotmedia_register_scripts" );
+
+    function upshotmedia_widget_areas(){
+        register_sidebar(
+            array(
+                'befor_title'=>'',
+                'afther_title'=>'',
+                'befor_widget'=>'',
+                'afther_widget'=>'',
+                'name'=>'sidebar Area',
+                'id'=>'sidbar-1',//css id for the change style
+                'description' => 'sidebar widget area'
+            )
+        );
+    }
+    add_action( 'widgets_init' , 'upshotmedia_widget_areas' );
+
 ?>

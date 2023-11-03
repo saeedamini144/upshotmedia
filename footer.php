@@ -12,7 +12,7 @@
                 <div class="col-12 text-center text-light m-auto p-4">
                     <p>© Copyright 2020 Upshot Media - All Rights Reserved. View our <a href="#" class="astyle">Privacy and Policy</a></p>
                 </div>
-            </div>    
+            </div>
         </div>
     </footer>
     <?php

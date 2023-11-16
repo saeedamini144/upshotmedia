@@ -29,6 +29,15 @@
     <?php
         the_posts_pagination(  );
     ?>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="<?php previous_posts_link(); ?>">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="<?php next_posts_link(); ?>">Next</a></li>
+        </ul>
+    </nav>
 </section>
 <?php
     get_footer();

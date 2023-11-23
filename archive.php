@@ -15,6 +15,8 @@
     </div>
 </section>
 <section class="container">
+    <div class="row">
+        <div class="col-md-3 col-lg-4 m-4">
             <?php
                 if(have_posts(  )){
                     while(have_posts(  )){
@@ -24,6 +26,8 @@
                     }
                 }
             ?>
+        </div>    
+    </div>
 </section>
 <?php
     get_footer();

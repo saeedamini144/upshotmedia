@@ -16,20 +16,24 @@
 </section>
 <section>
     <div class="container">
-        <?php
-            if(have_posts(  )){
-                while(have_posts(  )){
-                    the_post(  );
-                    // the_content(  );
-                    get_template_part( 'template-parts/content' , 'archive' );
+    <div class="row">
+            <?php
+                if(have_posts(  )){
+                    while(have_posts(  )){
+                        the_post(  );
+                        // the_content(  );
+                        get_template_part( 'template-parts/content' , 'archive' );
+                    }
                 }
-            }
-        ?>
+            ?>
+      
     </div>
+    </div>
+   
     <?php
-        the_posts_pagination(  );
-    ?>
-    <nav aria-label="Page navigation example">
+       the_posts_pagination(  );
+    ?> 
+    <!-- <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item"><a class="page-link" href="<?php previous_posts_link(); ?>">Previous</a></li>
             <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -37,7 +41,7 @@
             <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item"><a class="page-link" href="<?php next_posts_link(); ?>">Next</a></li>
         </ul>
-    </nav>
+    </nav> -->
 </section>
 <?php
     get_footer();

@@ -12,8 +12,10 @@ Author URI: saaed.amini@gmail.com
     margin: 0;
     border: 0;
     list-style-type: none ;
-    text-decoration: none;
     scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
 }
 h1{
     font-size: 56px !important;
@@ -304,4 +306,53 @@ textarea{
 .actionBox {
     border-top:1px dotted #bbb;
     padding:10px;
+}
+
+.card-title a {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-title a:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .card-title a:hover {
+   background-position: 0;
+  }
+  
+  .card-title a:hover::before{
+    width: 100%;
+  }
+  
+  .pagination {
+    display: flex;
+    padding-right: 0;
+    list-style: none;
+    justify-content: center;
+    margin: 1em;
+}
+.page-numbers{
+    padding: 0.5em;
+    border: 1px solid lightgray;
 }

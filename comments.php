@@ -12,28 +12,27 @@
 </section> -->
 <div class="detailBox">
     <div class="titleBox">
-      <label>Comment Box</label>
+        <label>Comment Box</label>
         <?php
-            if (!have_comments(  )){
-               echo "leave a comments";
-            }
-            else{
-               echo get_comments_number() . "comments";
-            }
+        if (!have_comments()) {
+            echo "leave a comments";
+        } else {
+            echo get_comments_number() . "comments";
+        }
         ?>
         <!-- <button type="button" class="close" aria-hidden="true">&times;</button> -->
     </div>
     <div class="commentBox">
-        
+
         <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
     <div class="actionBox">
         <ul class="commentList">
             <?php
-                wp_list_comments(array(
-                    'avatar_size' => 120,
-                    'style' => 'div',
-                ));
+            wp_list_comments(array(
+                'avatar_size' => 120,
+                'style' => 'div',
+            ));
             ?>
             <!-- <li>
                 <div class="commenterImage">
@@ -72,14 +71,15 @@
             </div>
         </form> -->
         <?php
-            if(comments_open()){
-                comment_form( array(
-                    'class_form'=>'',
+        if (comments_open()) {
+            comment_form(
+                array(
+                    'class_form' => '',
                     'title_reply_befor' => '<h2 class= "comment-replay-title" id="reply-title">',
                     'title_reply_after' => '</h2>',
                 )
             );
-            }
+        }
         ?>
     </div>
 </div>

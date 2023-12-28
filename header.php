@@ -14,7 +14,8 @@
         wp_head();
     ?>
 </head>
-<body <?php body_class() ?>>
+<body <?php body_class() ?>> 
+<!-- */in body class you can add diffrent class style/* -->
     <section class="headermenu">
         <div class="navbar fixed-top" id="headsection">
             <?php
@@ -25,7 +26,7 @@
                 // print_r($logo);
               }  
             ?>
-                <a href="#" class="navbar-brand"><img src="<?php echo $logo[0] ?>" alt=""></a>
+                <a href="<?php echo home_url();?>" class="navbar-brand"><img src="<?php echo $logo[0] ?>" alt=""></a>
             <div class="menubardiv">
                 <?php
                     wp_nav_menu( 

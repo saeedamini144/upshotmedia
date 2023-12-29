@@ -1,22 +1,25 @@
 <?php
-    get_header();
+get_header();
 ?>
-<section class="titlesection">
-    <div class="">
+<?php
+$backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+?>
+<section class="titlesection " style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat; ">
+    <div>
         <div class="container">
-            <h1><?php the_title( );?></h1>
+            <h1><?php the_title(); ?></h1>
         </div>
     </div>
 </section>
 <?php
-    if (have_posts(  )){
-        while( have_posts(  )){
-            the_post(  );
-            // the_content( );
-            get_template_part( '/template-parts/content' , 'page');
-        }
+if (have_posts()) {
+    while (have_posts()) {
+        the_post();
+        // the_content( );
+        get_template_part('/template-parts/content', 'page');
     }
+}
 ?>
 <?php
-    get_footer(  );
+get_footer();
 ?>

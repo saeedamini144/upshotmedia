@@ -6,10 +6,10 @@ get_header();
         <div class="container">
             <h1><?php the_archive_title(); ?></h1>
             <div>
-                <!-- <span><?php the_time('F j, Y'); ?> </span>
+                <span><?php the_time('j F, Y'); ?> </span>
                 <span><?php the_tags("<span> The tags: ", " </span>"); ?></span>
                 <span><?php the_category(); ?></span>
-                <span><?php comments_number() ?></span> -->
+                <span><?php comments_number() ?></span>
             </div>
         </div>
     </div>

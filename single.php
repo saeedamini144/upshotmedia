@@ -7,7 +7,8 @@ get_header();
             <h1><?php the_title(); ?></h1>
             <div>
                 <span><?php the_time('F j, Y'); ?> </span>
-                <span><?php the_tags("<span> The tags: ", " </span>"); ?></span>
+                <span><?php the_tags("<br><span> The tags: ", " </span>"); ?>
+                <br>
                 <span><?php the_category(); ?></span>
                 <span><?php comments_number() ?></span>
             </div>

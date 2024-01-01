@@ -21,7 +21,7 @@ h1{
     font-size: 56px !important;
 }
 .headsection{
-    background-image: url(/wp-content/uploads/2023/10/fidel-fernando-g8ldvfgv2e-unsplash-1-1078x720-1.jpg);
+    background-image: url("assets/images/fidel-fernando-g8ldvfgv2e-unsplash-1-1078x720.jpg");
     height: 100vh;
     width: 100%;
     background-size: cover;

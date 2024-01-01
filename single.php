@@ -9,7 +9,9 @@ get_header();
                 <span><?php the_time('F j, Y'); ?> </span>
                 <span><?php the_tags("<br><span> The tags: ", " </span>"); ?>
                     <br>
-                    <span> Author: <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a></span>
+                    <span> Author: <a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?>
+                        </a>
+                    </span>
                     <br>
                     <p>Categores: <?php
                                     $categories = get_the_category();
@@ -19,7 +21,7 @@ get_header();
                                         foreach ($categories as $category) {
                                             $output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>'  . $seprator;
                                         }
-                                        echo trim($output , $seprator);
+                                        echo trim($output, $seprator);
                                     }
                                     ?>
                     </p>

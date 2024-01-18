@@ -1,3 +1,5 @@
+let $ = jQuery.noConflict();
+
 var humbergerMenu = document.querySelector(".hamburger");
 var bars = document.querySelectorAll(".bar");
 var nav = document.querySelector(".navbar");
@@ -24,8 +26,9 @@ function scrollFunction(){
         document.getElementById("headsection").style.backgroundColor = "transparent";
     }
 }
-
-var splide = new Splide( '.splide', {
+// jQuery Code Area
+$(document).ready(function(){
+    var splide = new Splide( '.splide', {
     type   : 'loop',
     perPage: 5,
     focus  : 'center',
@@ -51,3 +54,4 @@ var splide = new Splide( '.splide', {
 },
 } );
 splide.mount();
+});

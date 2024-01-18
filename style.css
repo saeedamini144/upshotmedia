@@ -358,3 +358,25 @@ textarea{
     padding: 0.5em;
     border: 1px solid lightgray;
 }
+/* search style */
+#search{
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+#search:focus{
+    border: 1px solid lightgray;
+    box-shadow: 3px 3px 4px lightgray;
+}
+#searchSubmit{
+    background-color: #351D4C;
+    color: white;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}
+#searchSubmit:hover{
+    background-color: white ;
+    color: #351D4C;
+    border: 1px solid #351D4C;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+}

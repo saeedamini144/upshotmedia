@@ -309,8 +309,9 @@ textarea{
     border-top:1px dotted #bbb;
     padding:10px;
 }
+/* card-title */
 
-.card-title a {
+.card-title  a {
     background-image: linear-gradient(
       to right,
       #54b3d6,
@@ -339,14 +340,57 @@ textarea{
     transition: all 0.3s ease-in-out;
   }
   
-  .card-title a:hover {
+  .card-title  a:hover {
    background-position: 0;
   }
   
-  .card-title a:hover::before{
+  .card-title  a:hover::before{
+    width: 100%;
+  }
+
+  /* card-title */
+
+/* not found search style */
+  .notfound  h1 {
+    background-image: linear-gradient(
+      to right,
+      #54b3d6,
+      #54b3d6 50%,
+      #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .notfound h1:before{
+    content: '';
+    background: #54b3d6;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .notfound h1:hover {
+   background-position: 0;
+  }
+  
+  .notfound h1:hover::before{
     width: 100%;
   }
   
+  /* not found search style */
+
+
   .pagination {
     display: flex;
     padding-right: 0;

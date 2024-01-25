@@ -18,7 +18,7 @@ get_header();
                     get_template_part('template-parts/content', 'archive');
                 }
             }else{
-                echo "<div class='text-center m-auto p-5 h-100'><h1>The Serach not Found</h1></div>";
+                echo "<div class='notfound text-center m-auto p-5 h-100'><h1>The Serach not Found</h1></div>";
             }
             ?>
 

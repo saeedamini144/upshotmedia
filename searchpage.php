@@ -1,4 +1,9 @@
+<?php
+/*
+Template Name: Search Page
+*/
+?>
 <form id="searchform" action="<?php echo home_url('/');?>" method="get">
-    <input type="search" id="search" name="search" placeholder="<?php the_search_query(); ?>">
-    <input type="submit" id="searchSubmit" value="Search">
+    <input type="search" class="Search" name="search" placeholder="<?php the_search_query(); ?>">
+    <input type="submit" class="SearchSubmit" value="Search">
 </form>

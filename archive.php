@@ -39,8 +39,8 @@ get_header();
     <?php
     the_posts_pagination(array(
         'mid_size' => 2,
-        'prev_text' => __('صفحه قبلی', 'textdomain'),
-        'next_text' => __('صفحه بعدی', 'textdomain')
+        'prev_text' => __('Previuos Page', 'textdomain'),
+        'next_text' => __('Next Page' , 'textdomain')
 
     ));
     ?>

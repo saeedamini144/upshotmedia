@@ -39,7 +39,7 @@
             <div class="row align-items-center"> 
                 <div class="col-md-6 ">
                     <div class="img-figur">
-                        <img src="wp-content/themes/upshotmedia/assets/images/header-screen-1-772x1024 (1).png" alt="">
+                        <img src="<?php bloginfo('template_url');?>/assets/images/art-attic-1014x724.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-md-4 col-lg-8 ">
                     <div class="img-figurdark">
-                        <img src="wp-content/themes/upshotmedia/assets/images/art-attic-1014x724.png" alt="">
+                        <img src="<?php bloginfo('template_url');?>/assets/images/header-screen-1-772x1024 (1).png" alt="">
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
             <div class="row align-items-center"> 
                 <div class="col-md-6 ">
                     <div class="img-figur">
-                        <img src="wp-content/themes/upshotmedia/assets/images/ln-cover-copy-1046x822.png" alt="">
+                        <img src="<?php bloginfo('template_url');?>/assets/images/ln-cover-copy-1046x822.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -100,7 +100,7 @@
                 </div>
                 <div class="col-md-4 col-lg-8 ">
                     <div class="img-figurdark">
-                        <img src="wp-content/themes/upshotmedia/assets/images/video-1068x1025.jpg" alt="">
+                        <img src="<?php bloginfo('template_url');?>/assets/images/video-1068x1025.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -115,11 +115,11 @@
                 <div class="splide">
                     <div class="splide__track">
                         <ul class="splide__list">
-                            <li class="splide__slide"><img src="wp-content/themes/upshotmedia/assets/images/tri-675x421.png" alt=""></li>
-                            <li class="splide__slide"><img src="wp-content/themes/upshotmedia/assets/images/car-675x421.png" alt=""></li>
-                            <li class="splide__slide"><img src="wp-content/themes/upshotmedia/assets/images/crf-675x421.png" alt=""></li>
-                            <li class="splide__slide"><img src="wp-content/themes/upshotmedia/assets/images/dhfl-675x421.png" alt=""></li>
-                            <li class="splide__slide"><img src="wp-content/themes/upshotmedia/assets/images/fem-675x421.png" alt=""></li>
+                            <li class="splide__slide"><img src="<?php bloginfo('template_url');?>/assets/images/tri-675x421.png" alt=""></li>
+                            <li class="splide__slide"><img src="<?php bloginfo('template_url');?>/assets/images/car-675x421.png" alt=""></li>
+                            <li class="splide__slide"><img src="<?php bloginfo('template_url');?>/assets/images/crf-675x421.png" alt=""></li>
+                            <li class="splide__slide"><img src="<?php bloginfo('template_url');?>/assets/images/dhfl-675x421.png" alt=""></li>
+                            <li class="splide__slide"><img src="<?php bloginfo('template_url');?>/assets/images/fem-675x421.png" alt=""></li>
                         </ul>
                     </div>
                 </div>

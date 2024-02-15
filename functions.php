@@ -4,7 +4,7 @@ define('Address',get_template_directory_uri());//usse define instead of using lo
          // adds dynamic title tag support
         add_theme_support( 'title-tag' );
         add_theme_support( 'custom-logo' );//dynamic logo
-        add_theme_support( 'post-thumbnails' );//show dynamic title
+        add_theme_support( 'post-thumbnails' );//show Featuer images 
     }
     add_action( "after_setup_theme" , "upshotmedia_theme_support");
     

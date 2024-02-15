@@ -1,5 +1,5 @@
 <?php
-    get_header();
+    get_header();//can use Template part instead of usine all html and css hear , all section can be a on template part
 ?>
     <section class="headsection">
         <div class="row">

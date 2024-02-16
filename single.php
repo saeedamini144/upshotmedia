@@ -31,7 +31,20 @@ get_header();
     </div>
 </section>
 <div class="container">
-    <div class="m-5"><?php the_post_thumbnail(); ?></div>
+    <div class="m-5">
+        <!-- <?php the_post_thumbnail(); ?> instead of just using this one line code can use the pro -->
+        <?php
+            if(has_post_thumbnail()){
+                $image = array(
+                    'alt' => get_the_title(),
+                    'title' => get_the_title()
+                );
+                the_post_thumbnail('', $image);
+            }else{
+                echo"<img src=''>";//when the post have no images
+            }
+        ?>
+    </div>
     <?php
     if (have_posts()) {
         while (have_posts()) {

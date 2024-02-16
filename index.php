@@ -24,6 +24,7 @@ get_header();
                     // the_content(  );
                     get_template_part('template-parts/content', 'archive');
                 }
+                wp_reset_postdata();//After looping through a separate query, this function restores the $post global to the current post in the main query.
             }
             ?>
 

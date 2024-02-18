@@ -61,4 +61,5 @@ define('Address',get_template_directory_uri());//usse define instead of using lo
     add_action( 'widgets_init' , 'upshotmedia_widget_areas' );
     //add Cmb2 init file to load in our website
     require_once dirname(__FILE__) . '/includes/CMB2/init.php';
+    require_once dirname(__FILE__) . '/functions/cmb2-options.php';
 ?>

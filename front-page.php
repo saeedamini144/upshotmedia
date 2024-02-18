@@ -6,7 +6,11 @@
             <div class="container">
                <div class="overlay">
                     <div class="menubar-text text-center col-12">
-                        <h1 class="text-light mb-4">WELCOME TO UPSHOT MEDIA</h1>
+                        <?php
+                             $general_group = upshotmedia_get_option('upshotmedia_general_group');
+                            //  var_dump($general_group);
+                        ?>
+                        <h1 class="text-light mb-4"><?php echo $general_group[0]['Group_Text'];?></h1>
                         <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
                         <button class="btn btn-outline-light">Contact With Us</button>
                     </div>

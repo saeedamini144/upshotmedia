@@ -8,9 +8,9 @@
                     <div class="menubar-text text-center col-12">
                         <?php
                              $general_group = upshotmedia_get_option('upshotmedia_general_group');
-                            //  var_dump($general_group);
+                            // var_dump($cmb_options);
                         ?>
-                        <h1 class="text-light mb-4"><?php echo $general_group[0]['Group_Text'];?></h1>
+                        <h1 class="text-light mb-4"><?php echo $general_group[0]['Main_title_Text'];?></h1>
                         <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
                         <button class="btn btn-outline-light">Contact With Us</button>
                     </div>

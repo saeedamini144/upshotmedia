@@ -19,10 +19,11 @@ function upshotmedia_register_options_meta_box(){
  
      $cmb_options->add_group_field($general_group,array(
          'name' => 'Text',
-         'id' => 'Group_Text',
+         'id' => 'Main_title_Text',
          'type' => 'text'
      ));
 }
+
 function upshotmedia_get_option( $key = '', $default = false ) {
     if ( function_exists( 'cmb2_get_option' ) ) {
         return cmb2_get_option( 'upshotmedia_options', $key, $default );

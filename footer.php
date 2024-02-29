@@ -34,8 +34,16 @@
                 </ul>
             </div>
             <div class=" col-3 text-light p-2">
-                <h5>Contact Us</h5>
+                <h5>Gallery</h5>
                 <hr>
+                <div>
+                    <a href="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" data-lightbox="img-gallery2"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="gallery1"></a>
+                    <a href="" data-lightbox="img-gallery3"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="gallery2"></a>
+                    <a href="" data-lightbox="img-gallery4"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo3.jpg" alt="gallery3"></a>
+                    <a href="" data-lightbox="img-gallery1"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo4.jpg" alt="gallery5"></a>
+                    <a href="" data-lightbox="img-gallery5"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo5.jpg" alt="gallery5"></a>
+                    <a href="" data-lightbox="img-gallery6"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" alt="gallery7"></a>
+                </div>
             </div>
         </div>
     </div>

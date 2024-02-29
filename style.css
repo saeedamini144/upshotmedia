@@ -419,3 +419,10 @@ textarea {
   border-radius: 8px;
   transition-duration: 0.3s;
 }
+/* footer Gallery */
+.imggallery {
+  border-radius: 2px;
+  display: inline-block;
+  width: 30%;
+  margin: 2px 2px 2px 2px;
+}

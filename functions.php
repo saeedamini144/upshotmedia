@@ -38,7 +38,7 @@ function upshotmedia_register_scripts()
     wp_enqueue_script('upshotmedia-bootstrap.bundle.min', Address . '/assets/javascripts/bootstrap.bundle.min.js', array('jquery'), "1.0", true);
     wp_enqueue_script('upshotmedia-wow.min', Address . '/assets/javascripts/wow.min.js', array('jquery'), "1.0", true);
     wp_enqueue_script('upshotmedia-splide.min', Address . '/assets/javascripts/splide.min.js', array('jquery'), "1.0", true);
-    wp_enqueue_script('upshotmedia-Lightbox' . Address . '/assets/javascripts/lightbox.min.js', array('jquery'), '2.0', true);
+    wp_enqueue_script('upshotmedia-Lightbox', Address . '/assets/javascripts/lightbox.min.js', array('jquery'), '2.0', true);
     wp_enqueue_script('upshotmedia-mainjs', Address . '/assets/javascripts/main.js', array(), "1.0", true);
 }
 add_action("wp_enqueue_scripts", "upshotmedia_register_scripts");

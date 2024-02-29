@@ -56,3 +56,9 @@ $(document).ready(function () {
   });
   splide.mount();
 });
+
+// lightbox
+lightbox.option({
+  resizeDuration: 200,
+  wrapAround: true,
+});

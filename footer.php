@@ -1,7 +1,7 @@
 <footer class="bg-siah">
-    <div class="container">
+    <div class="container pt-5">
         <div class="row">
-            <div class=" col-3 text-light p-2">
+            <div class=" col-md-3 text-light p-2 ">
                 <h5>Services</h5>
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi</p>
@@ -14,7 +14,7 @@
                     </ul>
                 </div> -->
             </div>
-            <div class=" col-3 text-light p-2">
+            <div class=" col-md-3 text-light p-2">
                 <h5>Contact Us</h5>
                 <hr>
                 <ul>
@@ -23,7 +23,7 @@
                     <li class="mb-3"><strong>Phone:</strong> 555-6662345 </li>
                 </ul>
             </div>
-            <div class=" col-3 text-light p-2">
+            <div class=" col-md-3 text-light p-2">
                 <h5>Our Services</h5>
                 <hr>
                 <ul>
@@ -33,7 +33,7 @@
                     <li class="mb-3">Digital Marketing</li>
                 </ul>
             </div>
-            <div class=" col-3 text-light p-2">
+            <div class=" col-md-3 text-light p-2">
                 <h5>Gallery</h5>
                 <hr>
                 <div>

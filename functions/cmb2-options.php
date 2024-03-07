@@ -1,6 +1,7 @@
 <?php
-    add_action('cmb2_admin_init','upshotmedia_register_options_meta_box');
-function upshotmedia_register_options_meta_box(){
+add_action('cmb2_admin_init', 'upshotmedia_register_options_meta_box');
+function upshotmedia_register_options_meta_box()
+{
     $cmb_options = new_cmb2_box(array(
         'id' => 'upshotmedia_option_metabox',
         'title' => 'Theme Settings',
@@ -9,33 +10,51 @@ function upshotmedia_register_options_meta_box(){
     ));
     $general_group = $cmb_options->add_field(array(
         'id' => 'upshotmedia_general_group',
-         'type' => 'group',
-         'repeatable' => false,
-         'options' => array(
-             'group_title' => 'Public Setting',
-             'closed' => false ,
-         ),
-     ));
- 
-     $cmb_options->add_group_field($general_group,array(
-         'name' => 'Text',
-         'id' => 'Main_title_Text',
-         'type' => 'text'
-     ));
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Public Setting',
+            'closed' => false,
+        ),
+    ));
+
+    $cmb_options->add_group_field($general_group, array(
+        'name' => 'Text',
+        'id' => 'Main_title_Text',
+        'type' => 'text'
+    ));
+
+    // footer panels
+    $footer_group = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_footer_group',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Footer_group',
+            'closed' => false,
+        ),
+    ));
+    $cmb_options->add_group_field($footer_group, array(
+        'name' => 'Footer Explaine',
+        'id' => 'footer_explaine',
+        'type' => 'textarea',
+        // 'default_cb' => 'set_to_today'
+        'required' => false
+    ));
 }
 
-function upshotmedia_get_option( $key = '', $default = false ) {
-    if ( function_exists( 'cmb2_get_option' ) ) {
-        return cmb2_get_option( 'upshotmedia_options', $key, $default );
+function upshotmedia_get_option($key = '', $default = false)
+{
+    if (function_exists('cmb2_get_option')) {
+        return cmb2_get_option('upshotmedia_options', $key, $default);
     }
 
-    $opts = get_option( 'upshotmedia_options', $default );
+    $opts = get_option('upshotmedia_options', $default);
     $val = $default;
-    if ( 'all' == $key ) {
+    if ('all' == $key) {
         $val = $opts;
-    } elseif ( is_array( $opts ) && array_key_exists( $key, $opts ) && false !== $opts[ $key ] ) {
-        $val = $opts[ $key ];
+    } elseif (is_array($opts) && array_key_exists($key, $opts) && false !== $opts[$key]) {
+        $val = $opts[$key];
     }
     return $val;
 }
-?>

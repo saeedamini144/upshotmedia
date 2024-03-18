@@ -1,16 +1,17 @@
+<?php
+$footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back cmb2
+// var_dump($footer_group); 
+// 
+?>
 <footer class="bg-siah">
     <div class="container pt-5">
         <div class="row">
             <div class=" col-md-3 text-light p-2 ">
                 <figure>
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/upshot-logo-for-site-alt-122x122.png" alt="">
+                    <img src="<?php echo $footer_group[0]['Footer_Logo']; ?>" alt="">
                 </figure>
                 <!-- <h5>Services</h5>
                 <hr> -->
-                <?php
-                $footer_group = upshotmedia_get_option('upshotmedia_footer_group');
-                // var_dump($footer_group); 
-                ?>
                 <p><?php echo $footer_group[0]['footer_explaine']; ?></p>
                 <!-- <h2><strong>FOLLOW US!</strong></h2>
                 <div class="sociallink">

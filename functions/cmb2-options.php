@@ -41,6 +41,12 @@ function upshotmedia_register_options_meta_box()
         // 'default_cb' => 'set_to_today'
         'required' => false
     ));
+    $cmb_options->add_group_field($footer_group, array(
+        'name' => 'Footer Logo',
+        'id' => 'Footer_Logo',
+        'type' => 'file',
+        'desc'    => 'Upload an image or enter an URL.',
+    ));
 }
 
 function upshotmedia_get_option($key = '', $default = false)

@@ -13,14 +13,6 @@ $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back 
                 <!-- <h5>Services</h5>
                 <hr> -->
                 <p><?php echo $footer_group[0]['footer_explaine']; ?></p>
-                <!-- <h2><strong>FOLLOW US!</strong></h2>
-                <div class="sociallink">
-                    <ul>
-                        <li class="d-inline-block m-2"><span class=" fa-fa-instagram-square fa-3x"></span></li>
-                        <li class="d-inline-block m-2" ><span class=" fa-fa-youtube-square fa-3x"></span></li>
-                        <li class="d-inline-block m-2"><span class="fa-fa-twitter-square fa-3x"></span></li>
-                    </ul>
-                </div> -->
             </div>
             <div class=" col-md-3 text-light p-2">
                 <h5>Contact Us</h5>
@@ -53,6 +45,18 @@ $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back 
                     <a href="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" data-lightbox="img-gallery6"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" alt="gallery7"></a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="colr-12 text-center text-light m-auto p-5">
+        <h2><strong>FOLLOW US!</strong></h2>
+        <div class="sociallink">
+            <ul>
+                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-facebook-f fa-2x"></span></a></li>
+                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class=" fab fa-youtube fa-2x"></span></a></li>
+                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-twitter fa-2x"></span></a></li>
+                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-instagram fa-2x"></span></a></li>
+                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-telegram fa-2x"></span></a></li>
+            </ul>
         </div>
     </div>
     <div class="col-12 text-center text-light m-auto p-4">

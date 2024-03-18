@@ -23,6 +23,26 @@ function upshotmedia_register_options_meta_box()
         'id' => 'Main_title_Text',
         'type' => 'text'
     ));
+    //social Group
+    $social_group = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_social_group',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => array(
+            'group_title' => 'Social group {#}',
+            'closed' => true,
+        ),
+    ));
+    $cmb_options->add_group_field($social_group, array(
+        'name' => 'First Icon',
+        'id' => 'footer_icon_1',
+        'type' => 'text'
+    ));
+    $cmb_options->add_group_field($social_group, array(
+        'name' => 'First Icon Color',
+        'id' => 'footer_icon_color_1',
+        'type' => 'colorpicker'
+    ));
 
     // footer panels
     $footer_group = $cmb_options->add_field(array(

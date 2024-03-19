@@ -135,7 +135,7 @@ get_header(); //can use Template part instead of usine all html and css hear , a
         <div class="row col-12 text-center text-light p-5">
             <h2><strong>READY TO WORK WITH US?</strong></h2>
         </div>
-        <form action="" class="form-group" id="fromwidth">
+        <form class="p-4" action="" class="form-group" id="fromwidth">
             <div class="row">
                 <div class="col-md-4 form-group">
                     <label for="" class="form-label text-light d-block">Name</label>

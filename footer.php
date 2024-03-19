@@ -2,10 +2,14 @@
 $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back cmb2
 $social_group = upshotmedia_get_option('upshotmedia_social_group');
 $footer_group_contact_column = upshotmedia_get_option('upshotmedia_footer_group_contact_column');
-// var_dump($footer_group); 
-// 
+// var_dump($footer_group);
 ?>
-<footer class="bg-siah">
+<style>
+    .bg-footer-siah {
+        background-color: <?php echo $footer_group[0]['footer_color'] ?>;
+    }
+</style>
+<footer class="bg-footer-siah">
     <div class="container pt-5">
         <div class="row">
             <div class=" col-md-3 text-light p-2 ">

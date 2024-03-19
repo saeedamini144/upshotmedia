@@ -73,6 +73,11 @@ function upshotmedia_register_options_meta_box()
         'type' => 'file',
         'desc'    => 'Upload an image or enter an URL.',
     ));
+    $cmb_options->add_group_field($footer_group, array(
+        'name' => 'Footer Color',
+        'id' => 'footer_color',
+        'type' => 'colorpicker'
+    ));
     //footer Group Contact Column
     $footer_group_contact_column = $cmb_options->add_field(array(
         'id' => 'upshotmedia_footer_group_contact_column',

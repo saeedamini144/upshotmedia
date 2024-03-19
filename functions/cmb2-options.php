@@ -39,9 +39,15 @@ function upshotmedia_register_options_meta_box()
         'type' => 'text'
     ));
     $cmb_options->add_group_field($social_group, array(
-        'name' => 'First Icon Color',
-        'id' => 'footer_icon_color_1',
-        'type' => 'colorpicker'
+        'name' => 'First Icon Link',
+        'id' => 'footer_icon_link_1',
+        'type' => 'text_url',
+        'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
+    ));
+    $cmb_options->add_group_field($social_group, array(
+        'name' => 'First Icon class',
+        'id' => 'footer_icon_class_1',
+        'type' => 'text'
     ));
 
     // footer panels
@@ -66,6 +72,32 @@ function upshotmedia_register_options_meta_box()
         'id' => 'Footer_Logo',
         'type' => 'file',
         'desc'    => 'Upload an image or enter an URL.',
+    ));
+    //footer Group Contact Column
+    $footer_group_contact_column = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_footer_group_contact_column',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => array(
+            'group_title' => 'footer group contact column  {#}',
+            'closed' => true,
+        ),
+    ));
+    $cmb_options->add_group_field($footer_group_contact_column, array(
+        'name' => 'Title',
+        'id' => 'title_contact',
+        'type' => 'text'
+    ));
+    $cmb_options->add_group_field($footer_group_contact_column, array(
+        'name' => 'Contact Link',
+        'id' => 'contact_link',
+        'type' => 'text_url',
+        'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet', 'tel'), // Array of allowed protocols
+    ));
+    $cmb_options->add_group_field($footer_group_contact_column, array(
+        'name' => 'Contact Data',
+        'id' => 'contact_data',
+        'type' => 'text'
     ));
 }
 

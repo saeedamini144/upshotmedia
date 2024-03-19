@@ -1,5 +1,7 @@
 <?php
 $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back cmb2
+$social_group = upshotmedia_get_option('upshotmedia_social_group');
+$footer_group_contact_column = upshotmedia_get_option('upshotmedia_footer_group_contact_column');
 // var_dump($footer_group); 
 // 
 ?>
@@ -18,9 +20,14 @@ $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back 
                 <h5>Contact Us</h5>
                 <hr>
                 <ul>
-                    <li class="mb-3"><strong>Address:</strong> United States, California, Main Street </li>
-                    <li class="mb-3"><strong>Email:</strong> info@Upshotmedia.com </li>
-                    <li class="mb-3"><strong>Phone:</strong> 555-6662345 </li>
+                    <?php
+                    foreach ($footer_group_contact_column as $contact_column) {
+                    ?>
+                        <li class="mb-3"><strong><?php echo $contact_column['title_contact'] ?>: </strong><a href="<?php echo $contact_column['contact_link'] ?>"><?php echo $contact_column['contact_data'] ?></a></li>
+
+                    <?php
+                    }
+                    ?>
                 </ul>
             </div>
             <div class=" col-md-3 text-light p-2">
@@ -51,11 +58,13 @@ $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back 
         <h2><strong>FOLLOW US!</strong></h2>
         <div class="sociallink">
             <ul>
-                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-facebook-f fa-2x"></span></a></li>
-                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class=" fab fa-youtube fa-2x"></span></a></li>
-                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-twitter fa-2x"></span></a></li>
-                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-instagram fa-2x"></span></a></li>
-                <li class="d-inline-block m-2"> <a class="social-color" href=""><span class="fab fa-telegram fa-2x"></span></a></li>
+                <?php
+                foreach ($social_group as $social) {
+                ?>
+                    <li class="d-inline-block m-2"> <a class="social-color" href="<?php echo $social['footer_icon_link_1'] ?>"><span class="fab <?php echo $social['footer_icon_1']; ?> fa-2x"></span></a></li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </div>

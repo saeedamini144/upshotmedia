@@ -1,15 +1,12 @@
 <?php
 get_header(); //can use Template part instead of usine all html and css hear , all section can be a on template part
+$general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
 ?>
 <section class="headsection">
     <div class="row">
         <div class="container">
             <div class="overlay">
                 <div class="menubar-text text-center col-12">
-                    <?php
-                    $general_group = upshotmedia_get_option('upshotmedia_general_group');
-                    // var_dump($cmb_options);
-                    ?>
                     <h1 class="text-light mb-4"><?php echo $general_group[0]['Main_title_Text']; ?></h1>
                     <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
                     <button class="btn btn-outline-light">Contact With Us</button>

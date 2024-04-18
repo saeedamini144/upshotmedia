@@ -21,7 +21,7 @@ function upshotmedia_register_options_meta_box()
     $cmb_options->add_group_field($general_group, array(
         'name' => 'Text',
         'id' => 'Main_title_Text',
-        'type' => 'text'
+        'type' => 'text',
     ));
     //social Group
     $social_group = $cmb_options->add_field(array(
@@ -103,6 +103,26 @@ function upshotmedia_register_options_meta_box()
         'name' => 'Contact Data',
         'id' => 'contact_data',
         'type' => 'text'
+    ));
+    //services column
+    $footer_group_services_column = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_footer_group_services_column',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => array(
+            'group_title' => 'footer group services column  {#}',
+            'closed' => true,
+        ),
+    ));
+    $cmb_options->add_group_field($footer_group_services_column, array(
+        'name' => 'Name Link',
+        'id' => 'Name_Link',
+        'type' => 'text'
+    ));
+    $cmb_options->add_group_field($footer_group_services_column, array(
+        'name' => 'Services Link',
+        'id' => 'Services_Link',
+        'type' => 'text_url'
     ));
 }
 

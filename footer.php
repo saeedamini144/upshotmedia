@@ -2,6 +2,7 @@
 $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back cmb2
 $social_group = upshotmedia_get_option('upshotmedia_social_group');
 $footer_group_contact_column = upshotmedia_get_option('upshotmedia_footer_group_contact_column');
+$footer_group_services_column = upshotmedia_get_option('upshotmedia_footer_group_services_column');
 // var_dump($footer_group);
 ?>
 <style>
@@ -38,10 +39,13 @@ $footer_group_contact_column = upshotmedia_get_option('upshotmedia_footer_group_
                 <h5>Our Services</h5>
                 <hr>
                 <ul>
-                    <li class="mb-3">Photograhy</li>
-                    <li class="mb-3">Design</li>
-                    <li class="mb-3">Flowering</li>
-                    <li class="mb-3">Digital Marketing</li>
+                    <?php
+                    foreach ($footer_group_services_column as $services_column) {
+                    ?>
+                        <li class="mb-3"><a href="<?php echo $services_column['Services_Link'] ?>"><strong><?php echo $services_column['Name_Link'] ?></strong></a></li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </div>
             <div class=" col-md-3 text-light p-2">

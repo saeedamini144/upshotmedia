@@ -1,6 +1,8 @@
 <?php
 get_header(); //can use Template part instead of usine all html and css hear , all section can be a on template part
 $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
+$upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
+// var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
 ?>
 <section class="headsection">
     <div class="row">
@@ -116,11 +118,14 @@ $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dum
             <div class="splide">
                 <div class="splide__track">
                     <ul class="splide__list">
-                        <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/tri-675x421.png" alt=""></li>
-                        <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/car-675x421.png" alt=""></li>
-                        <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/crf-675x421.png" alt=""></li>
-                        <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/dhfl-675x421.png" alt=""></li>
-                        <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/fem-675x421.png" alt=""></li>
+                        <?php
+                        foreach ($upshotmedia_logo_carousel[0]['Images_carousel'] as $logo_data) {
+                        ?>
+                            <li class="splide__slide"><img src="<?php echo $logo_data; ?>" alt=""></li>
+                        <?php
+                        }
+                        ?>
+                        <!-- <li class="splide__slide"><img src="<?php bloginfo('template_url'); ?>/assets/images/fem-675x421.png" alt=""></li> -->
                     </ul>
                 </div>
             </div>

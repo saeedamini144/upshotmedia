@@ -23,6 +23,22 @@ function upshotmedia_register_options_meta_box()
         'id' => 'Main_title_Text',
         'type' => 'text',
     ));
+    // logo carousel
+    $upshotmedia_logo_carousel = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_logo_carousel',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Customer Logo',
+            'closed' => false,
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_logo_carousel, array(
+        'name' => 'Images Carousel',
+        'id' => 'Images_carousel',
+        'desc' => 'Upload an image or enter an URL.',
+        'type' => 'file_list'
+    ));
     //social Group
     $social_group = $cmb_options->add_field(array(
         'id' => 'upshotmedia_social_group',

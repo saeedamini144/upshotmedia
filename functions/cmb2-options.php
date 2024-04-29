@@ -140,6 +140,21 @@ function upshotmedia_register_options_meta_box()
         'id' => 'Services_Link',
         'type' => 'text_url'
     ));
+    //footer gallery
+    $footer_group_gallery = $cmb_options->add_field(array(
+        'id' => 'Footer_gallery_image',
+        'type' => 'group',
+        'options' => array(
+            'group_title' => 'Footer Group Gallery',
+            'closed' => true,
+        )
+    ));
+    $cmb_options->add_group_field($footer_group_gallery, array(
+        'name' => 'footer gallery',
+        'id' => 'footer_gallery',
+        'desc' => 'Upload an image or enter an URL.',
+        'type' => 'file_list'
+    ));
 }
 
 function upshotmedia_get_option($key = '', $default = false)

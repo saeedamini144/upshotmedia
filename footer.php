@@ -3,6 +3,7 @@ $footer_group = upshotmedia_get_option('upshotmedia_footer_group'); //call back 
 $social_group = upshotmedia_get_option('upshotmedia_social_group');
 $footer_group_contact_column = upshotmedia_get_option('upshotmedia_footer_group_contact_column');
 $footer_group_services_column = upshotmedia_get_option('upshotmedia_footer_group_services_column');
+$footer_group_gallery = upshotmedia_get_option('Footer_gallery_image');
 // var_dump($footer_group);
 ?>
 <style>
@@ -52,12 +53,20 @@ $footer_group_services_column = upshotmedia_get_option('upshotmedia_footer_group
                 <h5>Gallery</h5>
                 <hr>
                 <div>
-                    <a href="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" data-lightbox="img-gallery2"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="gallery1"></a>
-                    <a href="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" data-lightbox="img-gallery3"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="gallery2"></a>
+                    <?php
+                    foreach ($footer_group_gallery[0]['footer_gallery'] as $img_gallery) {
+                    ?>
+                        <!-- <img src="<?php echo $img_gallery;  ?>" alt=""> -->
+                        <a href=" <?php echo $img_gallery;  ?>  ?>" data-lightbox="img-gallery2"><img class="imggallery" src="<?php echo $img_gallery;  ?> ?>" alt="<?php echo 'alt gallery {#}' ?>"></a>
+                    <?php
+                    }
+                    ?>
+                    <!-- <a href="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" data-lightbox="img-gallery2"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="gallery1"></a> -->
+                    <!-- <a href="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" data-lightbox="img-gallery3"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="gallery2"></a>
                     <a href="<?php bloginfo('template_url') ?>/assets/images/Photo3.jpg" data-lightbox="img-gallery4"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo3.jpg" alt="gallery3"></a>
                     <a href="<?php bloginfo('template_url') ?>/assets/images/Photo4.jpg" data-lightbox="img-gallery1"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo4.jpg" alt="gallery5"></a>
                     <a href="<?php bloginfo('template_url') ?>/assets/images/Photo5.jpg" data-lightbox="img-gallery5"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo5.jpg" alt="gallery5"></a>
-                    <a href="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" data-lightbox="img-gallery6"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" alt="gallery7"></a>
+                    <a href="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" data-lightbox="img-gallery6"><img class="imggallery" src="<?php bloginfo('template_url') ?>/assets/images/Photo6.jpg" alt="gallery7"></a> -->
                 </div>
             </div>
         </div>

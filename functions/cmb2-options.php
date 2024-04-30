@@ -80,7 +80,6 @@ function upshotmedia_register_options_meta_box()
         'name' => 'Footer Explaine',
         'id' => 'footer_explaine',
         'type' => 'textarea',
-        // 'default_cb' => 'set_to_today'
         'required' => false
     ));
     $cmb_options->add_group_field($footer_group, array(
@@ -93,6 +92,12 @@ function upshotmedia_register_options_meta_box()
         'name' => 'Footer Color',
         'id' => 'footer_color',
         'type' => 'colorpicker'
+    ));
+    $cmb_options->add_group_field($footer_group, array(
+        'name' => 'CopyRight',
+        'id' => 'copyright',
+        'type' => 'text',
+        'desc' => 'Write the Copyright Text'
     ));
     //footer Group Contact Column
     $footer_group_contact_column = $cmb_options->add_field(array(

@@ -86,7 +86,7 @@ $footer_group_gallery = upshotmedia_get_option('Footer_gallery_image');
         </div>
     </div>
     <div class="col-12 text-center text-light m-auto p-4">
-        <p>© Copyright 2020 Upshot Media - All Rights Reserved. View our <a href="#" class="astyle">Privacy and Policy</a></p>
+        <p><?php echo $footer_group[0]['copyright'] ?></p>
     </div>
 </footer>
 <?php

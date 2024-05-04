@@ -101,7 +101,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
 <section class="customer-review">
     <div class="container">
         <div class="row">
-            <div class="splide_review">
+            <div id="splide_review" class="splide">
                 <div class="splide__track">
                     <div class="splide__list">
                         <?php foreach ($upshotmedia_review as $customer) { ?>
@@ -146,7 +146,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
             <div class="text-light text-center">
                 <h1>OUR CLIENTS</h1>
             </div>
-            <div class="splide">
+            <div class="splide" id="customer_logo">
                 <div class="splide__track">
                     <ul class="splide__list">
                         <?php

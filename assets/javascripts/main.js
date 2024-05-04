@@ -29,7 +29,7 @@ function scrollFunction() {
 }
 // jQuery Code Area
 $(document).ready(function () {
-  var splide = new Splide(".splide", {
+  var splide = new Splide("#customer_logo", {
     type: "loop",
     perPage: 5,
     focus: "center",
@@ -59,12 +59,11 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   //review
-  var splide = new Splide("splide_review", {
+  new Splide("#splide_review", {
     type: "loop",
-    padding: "5rem",
-  });
-
-  splide.mount();
+    perPage: 3,
+    autoplay: true,
+  }).mount();
 });
 
 // lightbox

@@ -57,6 +57,16 @@ $(document).ready(function () {
   splide.mount();
 });
 
+$(document).ready(function () {
+  //review
+  var splide = new Splide("splide_review", {
+    type: "loop",
+    padding: "5rem",
+  });
+
+  splide.mount();
+});
+
 // lightbox
 lightbox.option({
   resizeDuration: 200,

@@ -3,7 +3,14 @@ get_header(); //can use Template part instead of usine all html and css hear , a
 $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
 $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
+$upshotmedia_review = upshotmedia_get_option('customer_review');
+$upshotmedia_background_image = upshotmedia_get_option('review_background_image');
 ?>
+<style>
+    .customer-review {
+        background-image: url('<?php echo $upshotmedia_background_image[0]['review_background'] ?>');
+    }
+</style>
 <section class="headsection">
     <div class="row">
         <div class="container">
@@ -86,6 +93,30 @@ $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel')
                     <h1>GRAPHIC DESIGN THAT WOWS</h1>
                     <p class="pb-4">Feedback we mostly get from our clients is - “Everyone loved the design!”. Our specialities lie not only in helping early stage start-ups get a foot in the door but also in reviving tired brands. We love seeing them all excited about themselves again!</p>
                     <button class="btn btn-outline-light">FIND YOUR MOJO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="customer-review">
+    <div class="container">
+        <div class="row">
+            <div class="splide_review">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <?php foreach ($upshotmedia_review as $customer) { ?>
+                            <div class="splide__slide">
+                                <div>
+                                    <div>
+                                        <img src="<?php echo $customer['customer_img'] ?>" alt="">
+                                        <span><?php echo $customer['customer_name'] ?></span>
+                                    </div>
+                                    <p><?php echo $customer['review'] ?></p>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+
                 </div>
             </div>
         </div>

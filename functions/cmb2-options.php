@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 add_action('cmb2_admin_init', 'upshotmedia_register_options_meta_box');
 function upshotmedia_register_options_meta_box()
 {
@@ -22,6 +25,51 @@ function upshotmedia_register_options_meta_box()
         'name' => 'Text',
         'id' => 'Main_title_Text',
         'type' => 'text',
+    ));
+    //customer_reviw
+    $upshotmedia_background_image = $cmb_options->add_field(array(
+        'id' => 'review_background_image',
+        'name' => 'Upshot Media Background Image',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Review Background Image',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_background_image, array(
+        'id' => 'review_background',
+        'name' => 'Upshotmedia Review Background Image',
+        'type' => 'file',
+        'desc' => 'add image for the background'
+    ));
+    $upshotmedia_review = $cmb_options->add_field(array(
+        'id' => 'customer_review',
+        'name' => 'Customer Review data',
+        'type' => 'group',
+        'repeatable' => true,
+        'options' => array(
+            'group_title' => 'Customer Review data',
+            'cloed' => false,
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_review, array(
+        'id' => 'customer_img',
+        'name' => 'Customer Image',
+        'type' => 'file',
+        'desc' => 'add Image for the customer profile'
+    ));
+    $cmb_options->add_group_field($upshotmedia_review, array(
+        'id' => 'customer_name',
+        'name' => 'customer_name',
+        'type' => 'text',
+        'desc' => 'add customer name'
+    ));
+    $cmb_options->add_group_field($upshotmedia_review, array(
+        'id' => 'review',
+        'name' => 'Review',
+        'type' => 'textarea',
+        'desc' => 'add customer review'
     ));
     // logo carousel
     $upshotmedia_logo_carousel = $cmb_options->add_field(array(

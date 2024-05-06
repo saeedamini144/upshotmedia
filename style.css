@@ -162,7 +162,12 @@ textarea {
   border-radius: 100%;
   border: 1px solid #351d4c;
 }
-
+.customer_review {
+  min-height: 185px;
+}
+.customer_info {
+  margin-top: 30px;
+}
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 48px !important;

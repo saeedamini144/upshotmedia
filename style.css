@@ -253,6 +253,14 @@ textarea {
     display: block;
     margin: auto;
   }
+  .review {
+    width: auto;
+    text-align: justify;
+    padding: 10px;
+    backdrop-filter: blur(13px);
+    border-radius: 10px;
+    color: whitesmoke;
+  }
 }
 /* //page style */
 

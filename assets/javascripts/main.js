@@ -63,6 +63,17 @@ $(document).ready(function () {
     type: "loop",
     perPage: 3,
     autoplay: true,
+    breakpoints: {
+      768: {
+        perPage: 2,
+        // gap: ".2rem",
+        focus: "center",
+      },
+      480: {
+        perPage: 1,
+        focus: "center",
+      },
+    },
   }).mount();
 });
 

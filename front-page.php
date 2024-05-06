@@ -9,6 +9,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
 <style>
     .customer-review {
         background-image: url('<?php echo $upshotmedia_background_image[0]['review_background'] ?>');
+        padding: 50px 0 50px 0;
     }
 </style>
 <section class="headsection">
@@ -98,30 +99,6 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section class="customer-review">
-    <div class="container">
-        <div class="row">
-            <div id="splide_review" class="splide">
-                <div class="splide__track">
-                    <div class="splide__list">
-                        <?php foreach ($upshotmedia_review as $customer) { ?>
-                            <div class="splide__slide">
-                                <div>
-                                    <div>
-                                        <img src="<?php echo $customer['customer_img'] ?>" alt="">
-                                        <span><?php echo $customer['customer_name'] ?></span>
-                                    </div>
-                                    <p><?php echo $customer['review'] ?></p>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="bg-siah siah-section">
     <div class="container">
         <div class="row align-items-center">
@@ -140,6 +117,30 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
+<section class="customer-review">
+    <div class="container">
+        <div class="row">
+            <div id="splide_review" class="splide">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <?php foreach ($upshotmedia_review as $customer) { ?>
+                            <div class="splide__slide">
+                                <div class="review">
+                                    <p class="customer_review"><?php echo $customer['review'] ?></p>
+                                    <div class="customer_info">
+                                        <img class="customer_image" src="<?php echo $customer['customer_img'] ?>" alt="">
+                                        <span class="customer_name"><?php echo $customer['customer_name'] ?></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="bg-carosel">
     <div class="container">
         <div class="row">
@@ -152,7 +153,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
                         <?php
                         foreach ($upshotmedia_logo_carousel[0]['Images_carousel'] as $logo_data) {
                         ?>
-                            <li class="splide__slide"><img src="<?php echo $logo_data; ?>" alt=""></li>
+                            <li class="splide__slide"><img class="logo_image" src="<?php echo $logo_data; ?>" alt=""></li>
                         <?php
                         }
                         ?>

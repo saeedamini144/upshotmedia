@@ -3,6 +3,7 @@ get_header(); //can use Template part instead of usine all html and css hear , a
 $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
 $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
+$upshotmedia_Alert_section = upshotmedia_get_option('Alert_section');
 $upshotmedia_review = upshotmedia_get_option('customer_review');
 $upshotmedia_background_image = upshotmedia_get_option('review_background_image');
 ?>
@@ -25,16 +26,16 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section id="covid" class="bg-purple">
+<section id="covid" class="bg-purple alert-section">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="text-center text-light"><strong>COVID-19 UPDATE :</strong> IT'S BUSINESS AS USUAL !</p>
+                <p class="text-center text-light"><?php echo $upshotmedia_Alert_section[0]['Alert_section_content']; ?></p>
             </div>
         </div>
     </div>
 </section>
-<section id="aboutus" class="bg-siah">
+<section id="aboutus" class="bg-black">
     <div class="container">
         <div class="row">
             <div id="aboutustext" class="text-light text-center p-5">
@@ -63,7 +64,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section class="bg-siah siah-section">
+<section class="bg-black black-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-4">
@@ -99,7 +100,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section class="bg-siah siah-section">
+<!-- <section class="bg-black black-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-4">
@@ -116,7 +117,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <section class="customer-review">
     <div class="container">
         <div class="row">
@@ -164,7 +165,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section class="bg-siah">
+<section class="bg-black">
     <div class="container">
         <div class="row col-12 text-center text-light p-5">
             <h2><strong>READY TO WORK WITH US?</strong></h2>

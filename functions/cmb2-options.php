@@ -26,6 +26,23 @@ function upshotmedia_register_options_meta_box()
         'id' => 'Main_title_Text',
         'type' => 'text',
     ));
+    //alert-section
+    $upshotmedia_Alert_section = $cmb_options->add_field(array(
+        'id' => 'Alert_section',
+        'name' => 'Alert Section',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Alert Section',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_Alert_section, array(
+        'id' => 'Alert_section_content',
+        'name' => 'Alert section content',
+        'type' => 'text',
+        'desc' => 'Write the Alert content'
+    ));
     //customer_reviw
     $upshotmedia_background_image = $cmb_options->add_field(array(
         'id' => 'review_background_image',
@@ -33,7 +50,7 @@ function upshotmedia_register_options_meta_box()
         'type' => 'group',
         'repeatable' => false,
         'options' => array(
-            'group_title' => 'Review Background Image',
+            'group_title' => 'Review Background Image ',
             'closed' => false
         )
     ));
@@ -49,7 +66,7 @@ function upshotmedia_register_options_meta_box()
         'type' => 'group',
         'repeatable' => true,
         'options' => array(
-            'group_title' => 'Customer Review data',
+            'group_title' => 'Customer Review data {#}',
             'cloed' => false,
         )
     ));

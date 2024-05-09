@@ -74,8 +74,128 @@ function upshotmedia_register_options_meta_box()
     ));
     $cmb_options->add_group_field($upshotmedia_aboutus_section, array(
         'id' => 'ab_button_url',
-        'name' => 'About Us button Text',
+        'name' => 'About Us button Text url',
         'type' => 'text_url'
+    ));
+    //section content 1
+    $upshotmedia_section_content_one = $cmb_options->add_field(array(
+        'id' => 'section_content_one',
+        'name' => 'section Content one',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Section Content One',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_one, array(
+        'id' => 'title_content_one',
+        'name' => 'Title Content One',
+        'type' => 'text',
+        'desc' => 'ADD Title of the section Content'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_one, array(
+        'id' => 'Desc_content_one',
+        'name' => 'Description Of the content one',
+        'type' => 'textarea',
+        'desc' => 'write the description Content '
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_one, array(
+        'id' => 'content_one_button_text',
+        'name' => 'content Button text',
+        'type' => 'text',
+        'desc' => 'Write the botton text'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_one, array(
+        'id' => 'content_one_button_url',
+        'name' => 'Contetnt button Text url',
+        'type' => 'text_url'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_one, array(
+        'id' => 'content_one_image',
+        'name' => 'cotent Image one',
+        'type' => 'file',
+        'desc' => 'Upload Image'
+    ));
+    //section content 2
+    $upshotmedia_section_content_two = $cmb_options->add_field(array(
+        'id' => 'section_content_two',
+        'name' => 'section Content two',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Section Content two',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_two, array(
+        'id' => 'title_content_two',
+        'name' => 'Title Content two',
+        'type' => 'text',
+        'desc' => 'ADD Title of the section Content'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_two, array(
+        'id' => 'Desc_content_two',
+        'name' => 'Description Of the content two',
+        'type' => 'textarea',
+        'desc' => 'write the description Content '
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_two, array(
+        'id' => 'content_two_button_text',
+        'name' => 'content Button text',
+        'type' => 'text',
+        'desc' => 'Write the button text'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_two, array(
+        'id' => 'content_two_button_url',
+        'name' => 'Contetnt button Text url',
+        'type' => 'text_url'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_two, array(
+        'id' => 'content_two_image',
+        'name' => 'cotent Image two',
+        'type' => 'file',
+        'desc' => 'Upload Image'
+    ));
+    //section content 3
+    $upshotmedia_section_content_three = $cmb_options->add_field(array(
+        'id' => 'section_content_three',
+        'name' => 'section Content three',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'Section Content three',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_three, array(
+        'id' => 'title_content_three',
+        'name' => 'Title Content three',
+        'type' => 'text',
+        'desc' => 'ADD Title of the section Content'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_three, array(
+        'id' => 'Desc_content_three',
+        'name' => 'Description Of the content three',
+        'type' => 'textarea',
+        'desc' => 'write the description Content '
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_three, array(
+        'id' => 'content_three_button_text',
+        'name' => 'content Button text',
+        'type' => 'text',
+        'desc' => 'Write the button text'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_three, array(
+        'id' => 'content_three_button_url',
+        'name' => 'Contetnt button Text url',
+        'type' => 'text_url'
+    ));
+    $cmb_options->add_group_field($upshotmedia_section_content_three, array(
+        'id' => 'content_three_image',
+        'name' => 'cotent Image three',
+        'type' => 'file',
+        'desc' => 'Upload Image'
     ));
     //customer_reviw
     $upshotmedia_background_image = $cmb_options->add_field(array(

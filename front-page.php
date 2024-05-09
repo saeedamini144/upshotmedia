@@ -5,6 +5,9 @@ $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel')
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
 $upshotmedia_Alert_section = upshotmedia_get_option('Alert_section');
 $upshotmedia_aboutus_section = upshotmedia_get_option('Aboutus_section');
+$upshotmedia_section_content_one = upshotmedia_get_option('section_content_one');
+$upshotmedia_section_content_two = upshotmedia_get_option('section_content_two');
+$upshotmedia_section_content_three = upshotmedia_get_option('section_content_three');
 $upshotmedia_review = upshotmedia_get_option('customer_review');
 $upshotmedia_background_image = upshotmedia_get_option('review_background_image');
 ?>
@@ -47,19 +50,20 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
-<section class="bg-gradiant sectionheight">
+<section id="section_content1" class="bg-gradiant sectionheight">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 ">
                 <div class="img-figur">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/art-attic-1014x724.png" alt="">
+                    <!-- <img src="<?php bloginfo('template_url'); ?>/assets/images/art-attic-1014x724.png" alt=""> -->
+                    <img src="<?php echo $upshotmedia_section_content_one[0]['content_one_image'] ?>" alt="">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="text-center text-light">
-                    <h1>APPS ENGINEERED TO PERFECTION</h1>
-                    <p class="pb-4">We are passionate about strategic design for mobile technology. The competition across segments will always be fierce and therefore we aim to create a long-term emotional understanding with users. In short, your tomorrow is our today!</p>
-                    <button class="btn btn-outline-light">TRANSFORM YOUR IDEAS</button>
+                    <h1><?php echo $upshotmedia_section_content_one[0]['title_content_one'] ?></h1>
+                    <p class="pb-4"><?php echo $upshotmedia_section_content_one[0]['Desc_content_one'] ?></p>
+                    <a href="<?php echo $upshotmedia_section_content_one[0]['content_one_button_url'] ?>"><button class="btn btn-outline-light"><?php echo $upshotmedia_section_content_one[0]['content_one_button_text'] ?></button></a>
                 </div>
             </div>
         </div>
@@ -70,14 +74,14 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         <div class="row align-items-center">
             <div class="col-md-6 col-lg-4">
                 <div class="text-center text-light">
-                    <h1>SITES THAT MAKE YOU GO OOOH</h1>
-                    <p class="pb-4">Your website is like an online office. It is the first chance to make a good impression on potential clients. We offer end-to-end web development services for brands with the ambition and will to conquer their space.</p>
-                    <button class="btn btn-outline-light">SEE WHAT WE'VE BUILT</button>
+                    <h1><?php echo $upshotmedia_section_content_two[0]['title_content_two'] ?></h1>
+                    <p class="pb-4"><?php echo $upshotmedia_section_content_two[0]['Desc_content_two'] ?></p>
+                    <a href="<?php echo $upshotmedia_section_content_two[0]['content_two_button_url'] ?>"><button class="btn btn-outline-light"><?php echo $upshotmedia_section_content_two[0]['content_two_button_text'] ?></button></a>
                 </div>
             </div>
             <div class="col-md-4 col-lg-8 ">
                 <div class="img-figurdark">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/header-screen-1-772x1024 (1).png" alt="">
+                    <img src="<?php echo $upshotmedia_section_content_two[0]['content_two_image'] ?>" alt="">
                 </div>
             </div>
         </div>
@@ -88,14 +92,14 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         <div class="row align-items-center">
             <div class="col-md-6 ">
                 <div class="img-figur">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/images/ln-cover-copy-1046x822.png" alt="">
+                    <img src="<?php echo $upshotmedia_section_content_three[0]['content_three_image'] ?>" alt="">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="text-center text-light">
-                    <h1>GRAPHIC DESIGN THAT WOWS</h1>
-                    <p class="pb-4">Feedback we mostly get from our clients is - “Everyone loved the design!”. Our specialities lie not only in helping early stage start-ups get a foot in the door but also in reviving tired brands. We love seeing them all excited about themselves again!</p>
-                    <button class="btn btn-outline-light">FIND YOUR MOJO</button>
+                    <h1><?php echo $upshotmedia_section_content_three[0]['title_content_three'] ?></h1>
+                    <p class="pb-4"><?php echo $upshotmedia_section_content_three[0]['Desc_content_three'] ?></p>
+                    <a href="<?php echo $upshotmedia_section_content_three[0]['content_three_button_url'] ?>"><button class="btn btn-outline-light"><?php echo $upshotmedia_section_content_three[0]['content_three_button_text'] ?></button></a>
                 </div>
             </div>
         </div>

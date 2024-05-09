@@ -4,6 +4,7 @@ $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dum
 $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
 $upshotmedia_Alert_section = upshotmedia_get_option('Alert_section');
+$upshotmedia_aboutus_section = upshotmedia_get_option('Aboutus_section');
 $upshotmedia_review = upshotmedia_get_option('customer_review');
 $upshotmedia_background_image = upshotmedia_get_option('review_background_image');
 ?>
@@ -39,9 +40,9 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
     <div class="container">
         <div class="row">
             <div id="aboutustext" class="text-light text-center p-5">
-                <h5 class="pb-3">Upshot Media is a boutique design agency based in Mumbai, India.</h5>
-                <p class="pb-5">We build world-class digital products for start-ups and established brands. Our handpicked team of professionals includes award-winning industry specialists who live and breathe design. Over the years, we have developed a profound understanding of strategies that help our clients navigate the complexity of today’s digital world.</p>
-                <button class="btn btn-outline-light">MORE ABOUT US</button>
+                <h5 class="pb-3"><?php echo $upshotmedia_aboutus_section[0]['aboutus_title'] ?></h5>
+                <p class="pb-5"><?php echo $upshotmedia_aboutus_section[0]['aboutus_content'] ?></p>
+                <a href="<?php echo $upshotmedia_aboutus_section[0]['ab_button_url'] ?>"><button class="btn btn-outline-light"><?php echo $upshotmedia_aboutus_section[0]['ab_button_text'] ?></button></a>
             </div>
         </div>
     </div>

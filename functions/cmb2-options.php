@@ -43,6 +43,40 @@ function upshotmedia_register_options_meta_box()
         'type' => 'text',
         'desc' => 'Write the Alert content'
     ));
+    //about us section
+    $upshotmedia_aboutus_section = $cmb_options->add_field(array(
+        'id' => 'Aboutus_section',
+        'name' => 'About us',
+        'type' => 'group',
+        'repeatable' => false,
+        'options' => array(
+            'group_title' => 'About Us Section',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_aboutus_section, array(
+        'id' => 'aboutus_title',
+        'name' => 'About Us Title',
+        'type' => 'text',
+        'desc' => 'Write the title'
+    ));
+    $cmb_options->add_group_field($upshotmedia_aboutus_section, array(
+        'id' => 'aboutus_content',
+        'name' => 'About Us content',
+        'type' => 'textarea',
+        'desc' => "write Content Of the About Us"
+    ));
+    $cmb_options->add_group_field($upshotmedia_aboutus_section, array(
+        'id' => 'ab_button_text',
+        'name' => ' about us Button text',
+        'type' => 'text',
+        'desc' => 'Write the botton text'
+    ));
+    $cmb_options->add_group_field($upshotmedia_aboutus_section, array(
+        'id' => 'ab_button_url',
+        'name' => 'About Us button Text',
+        'type' => 'text_url'
+    ));
     //customer_reviw
     $upshotmedia_background_image = $cmb_options->add_field(array(
         'id' => 'review_background_image',

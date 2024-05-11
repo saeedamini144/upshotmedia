@@ -50,6 +50,31 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
+<section id="services" class="bg-black">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <span class="services-mini-text text-light">What We do</span>
+                <h2 class="services-title text-light">Our Services</h2>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <a href="#"><button class="btn btn-outline-light">Watch Our Services</button></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="services-box">
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="service-item">
+                            <i style="color: #ffff;" class="fa fa-paint-brush"></i>
+                            <h3>Creative Design</h3>
+                            <p>Visitors click on the computers of other members of the market, you advertise your properties.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
 <section id="section_content1" class="bg-gradiant sectionheight">
     <div class="container">
         <div class="row align-items-center">

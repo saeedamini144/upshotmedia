@@ -168,6 +168,56 @@ textarea {
 .customer_info {
   margin-top: 30px;
 }
+/* services */
+#services {
+  width: 100%;
+  background: #000;
+  padding: 70px 0;
+  height: auto;
+}
+#services .services-box {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+#services .services-box .col {
+  margin: 0;
+  padding: 0;
+}
+#services .services-box .service-item {
+  background: #000;
+  padding: 15px;
+  width: 100%;
+  min-height: 215px;
+  overflow: hidden;
+  border-bottom: 1px solid #f4f4f4;
+  border-right: 1px solid #f2f2f2;
+  transition: all 250ms;
+  z-index: 1002;
+}
+#services .services-box .service-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px 4px rgba(237, 237, 237, 1);
+  z-index: 1004;
+}
+#services .services-box .service-item h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 12px 0;
+}
+#services .services-box .service-item p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+}
+.no-left {
+  border-left: none !important;
+}
+.no-bottom {
+  border-bottom: none !important;
+}
+.service-item > i {
+  fill: #fff;
+}
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 48px !important;
@@ -260,6 +310,14 @@ textarea {
     backdrop-filter: blur(13px);
     border-radius: 10px;
     color: whitesmoke;
+  }
+  #services .services-box .col {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+  }
+  #services .services-box .service-item {
+    border: none;
   }
 }
 /* //page style */

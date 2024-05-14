@@ -17,6 +17,25 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         padding: 50px 0 50px 0;
     }
 </style>
+<section class="slider_sections">
+    <div>
+        <div class="splide" id="splide_slider">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="">
+                    </li>
+                    <li class="splide__slide">
+                        <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo3.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="headsection">
     <div class="row">
         <div class="container">

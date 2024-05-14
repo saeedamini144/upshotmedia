@@ -76,7 +76,11 @@ $(document).ready(function () {
     },
   }).mount();
 });
-
+//splide_slider
+$(document).ready(function () {
+  //review
+  new Splide("#splide_slider").mount();
+});
 // lightbox
 lightbox.option({
   resizeDuration: 200,

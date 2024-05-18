@@ -11,20 +11,84 @@ function upshotmedia_register_options_meta_box()
         'object_types' => array('options-page'),
         'option_key' => 'upshotmedia_options'
     ));
-    $general_group = $cmb_options->add_field(array(
-        'id' => 'upshotmedia_general_group',
+    // $general_group = $cmb_options->add_field(array(
+    //     'id' => 'upshotmedia_general_group',
+    //     'type' => 'group',
+    //     'repeatable' => false,
+    //     'options' => array(
+    //         'group_title' => 'Public Setting',
+    //         'closed' => false,
+    //     ),
+    // ));
+
+    // $cmb_options->add_group_field($general_group, array(
+    //     'name' => 'Text',
+    //     'id' => 'Main_title_Text',
+    //     'type' => 'text',
+    // ));
+    //services sections
+    $upshotmedia_servicse = $cmb_options->add_field(array(
+        'id' => 'upshotmedia_services',
+        'name' => 'Services Section',
         'type' => 'group',
         'repeatable' => false,
-        'options' => array(
-            'group_title' => 'Public Setting',
-            'closed' => false,
+        'option' => array(
+            'group title' => 'Services Section',
+            'closed' => false
+        )
+    ));
+    $cmb_options->add_group_field($upshotmedia_servicse, array(
+        'id' => 'services_subtitle',
+        'name' => 'Services Subtitlr',
+        'type' => 'text',
+        'desc' => 'Write the Subtitle'
+    ));
+    $cmb_options->add_group_field($upshotmedia_servicse, array(
+        'id' => 'services_title',
+        'name' => 'Services Title',
+        'type' => 'text',
+        'desc' => 'write the services title'
+    ));
+    $cmb_options->add_group_field($upshotmedia_servicse, array(
+        'id' => 'services_button_text',
+        'name' => 'Services Buttun text',
+        'type' => 'text',
+        'desc' => 'write the buttun title'
+    ));
+    $cmb_options->add_group_field($upshotmedia_servicse, array(
+        'id' => 'services_button_url',
+        'name' => 'Services Buttun url',
+        'type' => 'url',
+        'desc' => 'write the buttun title'
+    ));
+    //services Item
+    $upshotmedia_services_item = $cmb_options->add_field(array(
+        'id' => 'services_item',
+        'name' => 'Services Item',
+        'type' => 'group',
+        'repeatable' => true,
+        'option' => array(
+            'group title' => 'Services Section',
+            'closed' => false
         ),
     ));
-
-    $cmb_options->add_group_field($general_group, array(
-        'name' => 'Text',
-        'id' => 'Main_title_Text',
+    $cmb_options->add_group_field($upshotmedia_services_item, array(
+        'id' => 'services_icon',
+        'name' => 'Services Icon',
         'type' => 'text',
+        'desc' => 'Write the icon name'
+    ));
+    $cmb_options->add_group_field($upshotmedia_services_item, array(
+        'id' => 'services_title',
+        'name' => 'Services Title',
+        'type' => 'text',
+        'desc' => 'Write the Title name'
+    ));
+    $cmb_options->add_group_field($upshotmedia_services_item, array(
+        'id' => 'services_text',
+        'name' => 'Services Text Area',
+        'type' => 'textarea',
+        'desc' => 'Write the Text name'
     ));
     //alert-section
     $upshotmedia_Alert_section = $cmb_options->add_field(array(

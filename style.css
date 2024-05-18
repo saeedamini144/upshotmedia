@@ -91,6 +91,19 @@ button {
   );
   overflow: hidden !important;
 }
+/* .slider_sections {
+  height: 100vh;
+} */
+.slider_content {
+  position: absolute;
+  z-index: 3;
+  top: 80px;
+  left: 100px;
+  width: 450px;
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  border-radius: 10px;
+}
 .sectionheight {
   display: flex;
   align-items: center;

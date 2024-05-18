@@ -79,7 +79,11 @@ $(document).ready(function () {
 //splide_slider
 $(document).ready(function () {
   //review
-  new Splide("#splide_slider").mount();
+  new Splide("#splide_slider", {
+    type: "fade",
+    rewind: true,
+    // arrows: (boolean = false),
+  }).mount();
 });
 // lightbox
 lightbox.option({

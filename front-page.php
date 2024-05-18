@@ -1,9 +1,11 @@
 <?php
 get_header(); //can use Template part instead of usine all html and css hear , all section can be a on template part
-$general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
+// $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
 $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
 $upshotmedia_Alert_section = upshotmedia_get_option('Alert_section');
+$upshotmedia_servicse = upshotmedia_get_option('upshotmedia_services');
+$upshotmedia_services_item = upshotmedia_get_option('services_item');
 $upshotmedia_aboutus_section = upshotmedia_get_option('Aboutus_section');
 $upshotmedia_section_content_one = upshotmedia_get_option('section_content_one');
 $upshotmedia_section_content_two = upshotmedia_get_option('section_content_two');
@@ -24,27 +26,29 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
                 <ul class="splide__list">
                     <li class="splide__slide">
                         <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="">
+                        <div class="slider_content">
+                            <h2 class="slider_title">Testing Text1</h2>
+                            <p class="slider_text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                            <button class="btn btn-outline-light">Contact With Us</button>
+                        </div>
                     </li>
                     <li class="splide__slide">
                         <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="">
+                        <div class="slider_content">
+                            <h2 class="slider_title">Testing Text2</h2>
+                            <p class="slider_text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                            <button class="btn btn-outline-light">Contact With Us</button>
+                        </div>
                     </li>
                     <li class="splide__slide">
                         <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo3.jpg" alt="">
+                        <div class="slider_content">
+                            <h2 class="slider_title">Testing Text3</h2>
+                            <p class="slider_text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+                            <button class="btn btn-outline-light">Contact With Us</button>
+                        </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="headsection">
-    <div class="row">
-        <div class="container">
-            <div class="overlay">
-                <div class="menubar-text text-center col-12">
-                    <h1 class="text-light mb-4"><?php echo $general_group[0]['Main_title_Text']; ?></h1>
-                    <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
-                    <button class="btn btn-outline-light">Contact With Us</button>
-                </div>
             </div>
         </div>
     </div>
@@ -58,6 +62,19 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
+<!-- <section class="headsection">
+    <div class="row">
+        <div class="container">
+            <div class="overlay">
+                <div class="menubar-text text-center col-12">
+                    <h1 class="text-light mb-4"><?php echo $general_group[0]['Main_title_Text']; ?></h1>
+                    <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
+                    <button class="btn btn-outline-light">Contact With Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
 <section id="aboutus" class="bg-black">
     <div class="container">
         <div class="row">

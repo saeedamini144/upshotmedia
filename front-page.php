@@ -1,10 +1,11 @@
 <?php
 get_header(); //can use Template part instead of usine all html and css hear , all section can be a on template part
 // $general_group = upshotmedia_get_option('upshotmedia_general_group'); // var_dump($cmb_options);
+$upshotmedia_slider = upshotmedia_get_option('main_slider');
 $upshotmedia_logo_carousel = upshotmedia_get_option('upshotmedia_logo_carousel');
 // var_dump($upshotmedia_logo_carousel);to undrestand better the file_list of cmb2
 $upshotmedia_Alert_section = upshotmedia_get_option('Alert_section');
-$upshotmedia_servicse = upshotmedia_get_option('upshotmedia_services');
+$upshotmedia_services = upshotmedia_get_option('upshotmedia_services');
 $upshotmedia_services_item = upshotmedia_get_option('services_item');
 $upshotmedia_aboutus_section = upshotmedia_get_option('Aboutus_section');
 $upshotmedia_section_content_one = upshotmedia_get_option('section_content_one');
@@ -18,21 +19,44 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         background-image: url('<?php echo $upshotmedia_background_image[0]['review_background'] ?>');
         padding: 50px 0 50px 0;
     }
+
+    .slider_title {
+        color: <?php echo $slider_content['slider_title_color'] ?>;
+    }
+
+    .slider_text {
+        color: <?php echo $slider_content['slider_desc_color'] ?>;
+    }
+
+    .slider_button_style {
+        color: <?php echo $slider_content['slider_button_name_color'] ?>;
+        padding: 20px 40px;
+        border: 1px;
+        border-color: <?php echo $slider_content['border_color'] ?>;
+    }
 </style>
 <section class="slider_sections">
     <div>
         <div class="splide" id="splide_slider">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide">
-                        <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo1.jpeg" alt="">
-                        <div class="slider_content">
-                            <h2 class="slider_title">Testing Text1</h2>
-                            <p class="slider_text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
-                            <button class="btn btn-outline-light">Contact With Us</button>
-                        </div>
-                    </li>
-                    <li class="splide__slide">
+                    <?php
+                    foreach ($upshotmedia_slider as $slider_content) {
+                    ?>
+                        <li class="splide__slide">
+
+                            <img class="w-100" src="<?php echo $slider_content['slider_image'] ?>" alt="">
+                            <div class="slider_content">
+                                <h2 class="slider_title"><?php echo $slider_content['slider_title'] ?></h2>
+                                <p class="slider_text"><?php echo $slider_content['slider_desc'] ?></p>
+                                <button class="btn slider_button_style"><?php echo $slider_content['slider_button_name'] ?></button>
+                            </div>
+
+                        </li>
+                    <?php
+                    }
+                    ?>
+                    <!-- <li class="splide__slide">
                         <img class="w-100" src="<?php bloginfo('template_url') ?>/assets/images/Photo2.jpg" alt="">
                         <div class="slider_content">
                             <h2 class="slider_title">Testing Text2</h2>
@@ -47,7 +71,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
                             <p class="slider_text">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
                             <button class="btn btn-outline-light">Contact With Us</button>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -90,23 +114,41 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                <span class="services-mini-text text-light">What We do</span>
-                <h2 class="services-title text-light">Our Services</h2>
+                <span class="services-mini-text text-light"><?php echo $upshotmedia_services[0]['services_subtitle'] ?></span>
+                <h2 class="services-title text-light"><?php echo $upshotmedia_services[0]['services_title'] ?></h2>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                <a href="#"><button class="btn btn-outline-light">Watch Our Services</button></a>
+                <a href="<?php echo $upshotmedia_services[0]['services_button_url'] ?>"><button class="btn btn-outline-light"><?php echo $upshotmedia_services[0]['services_button_text'] ?></button></a>
             </div>
         </div>
         <div class="container">
             <div class="services-box">
                 <div class="row">
-                    <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <div class="service-item">
-                            <i style="color: #ffff;" class="fa fa-paint-brush"></i>
-                            <h3>Creative Design</h3>
-                            <p>Visitors click on the computers of other members of the market, you advertise your properties.</p>
+                    <?php
+                    foreach ($upshotmedia_services_item as $item_services) {
+                    ?>
+                        <div class="col col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <?php
+                            if (isset($item_services['right_line'])) {
+                                $right_border = null;
+                            } else {
+                                $right_border = 'border_right';
+                            }
+                            if (isset($item_services['bottom_line'])) {
+                                $bottom_border = null;
+                            } else {
+                                $bottom_border = 'border_bottom';
+                            }
+                            ?>
+                            <div class="service-item <?php echo $right_border . ' ' . $bottom_border ?>">
+                                <i style="color: #ffff;" class="fa <?php echo $item_services['services_icon'] ?>"></i>
+                                <h3><?php echo $item_services['item_title'] ?></h3>
+                                <p><?php echo $item_services['item_text'] ?></p>
+                            </div>
                         </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

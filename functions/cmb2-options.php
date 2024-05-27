@@ -66,6 +66,7 @@ function upshotmedia_register_options_meta_box()
         'id' => 'slider_button_name',
         'name' => 'Slider button name',
         'type' => 'text',
+        'default' => null,
     ));
     $cmb_options->add_group_field($upshotmedia_slider, array(
         'id' => 'slider_button_name_color',

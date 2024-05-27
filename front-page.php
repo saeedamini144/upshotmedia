@@ -20,7 +20,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         padding: 50px 0 50px 0;
     }
 
-    .slider_title {
+    /* .slider_title {
         color: <?php echo $slider_content['slider_title_color'] ?>;
     }
 
@@ -33,7 +33,7 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         padding: 20px 40px;
         border: 1px;
         border-color: <?php echo $slider_content['border_color'] ?>;
-    }
+    } */
 </style>
 <section class="slider_sections">
     <div>
@@ -47,9 +47,9 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
 
                             <img class="w-100" src="<?php echo $slider_content['slider_image'] ?>" alt="">
                             <div class="slider_content">
-                                <h2 class="slider_title"><?php echo $slider_content['slider_title'] ?></h2>
-                                <p class="slider_text"><?php echo $slider_content['slider_desc'] ?></p>
-                                <button class="btn slider_button_style"><?php echo $slider_content['slider_button_name'] ?></button>
+                                <h2 class="slider_title" style="color:<?php echo $slider_content['slider_title_color']; ?>"><?php echo $slider_content['slider_title'] ?></h2>
+                                <p class="slider_text" style="color:<?php echo $slider_content['slider_desc_color']; ?>"><?php echo $slider_content['slider_desc'] ?></p>
+                                <button class="btn slider_button_style" style=" color: <?php echo $slider_content['slider_button_name_color'] ?>;border-color: <?php echo $slider_content['border_color'] ?>;"><?php echo $slider_content['slider_button_name'] ?></button>
                             </div>
 
                         </li>

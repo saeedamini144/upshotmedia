@@ -66,6 +66,31 @@ h1 {
   font-size: 56px;
   font-weight: 700;
 }
+.menu-item-has-children > a:after {
+  content: "\f0dd";
+  font: normal normal normal 14px/1 FontAwesome;
+  color: #fff;
+  margin: 0;
+  padding: 0 5px 0 0;
+}
+.sub-menu li a {
+  color: #000;
+  margin: 1.2em;
+}
+.sub-menu {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  position: absolute;
+  padding: 1.2rem;
+  display: none;
+  background-color: white;
+  transition: 0.3s;
+}
+.menu-item:hover .sub-menu {
+  display: block;
+  transition: 0.3s;
+}
 button {
   letter-spacing: 1px;
   width: 250px;

@@ -49,11 +49,55 @@
                     <li><a href="#">Video Content</a></li>
                 </ul> -->
             </div>
-            <div class="hamburger d-lg-none">
+            <div class="slideMobileMenu">
+                <ul class="mobile_menu">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Category 1</a>
+                        <ul class="submenu">
+                            <li><a href="#">Category 1.1</a></li>
+                            <li>
+                                <a href="#">Category 1.2</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Category 1.2.1</a> </li>
+                                    <li>
+                                        <a href="#">Category 1.2.2</a>
+                                        <ul class="submenu">
+                                            <li><a href="#">Category 1.2.2.1</a></li>
+                                            <li><a href="#">Category 1.2.2.2</a></li>
+                                            <li><a href="#">Category 1.2.2.3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Category 1.2.3</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Category 1.3</a>
+                                <ul class="submenu">
+                                    <li> <a href="#">Category 1.3.1</a> </li>
+                                    <li> <a href="#">Category 1.3.2</a> </li>
+                                    <li> <a href="#">Category 1.3.3</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Category 2</a>
+                        <ul class="submenu">
+                            <li><a href="">Category 2.1</a></li>
+                            <li><a href="">Category 2.2</a></li>
+                            <li><a href="">Category 2.3</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#">Category 3</a> </li>
+                    <li> <a href="#">Category 4</a> </li>
+                </ul>
+            </div>
+            <!-- <div class="hamburger d-lg-none">
                 <span class="bar-1"></span>
                 <span class="bar-2"></span>
                 <span class="bar-3"></span>
-            </div>
+            </div> -->
         </div>
         <!-- <div class="menubar-text text-center col-12">
             <h1 class="text-light mb-4">WELCOME TO UPSHOT MEDIA</h1>

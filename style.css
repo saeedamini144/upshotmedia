@@ -283,11 +283,9 @@ textarea {
   .menubar li {
     padding-bottom: 10px;
   }
-  .hamburger {
+  /* .hamburger {
     height: 45px;
     width: 50px;
-    /* display: block; */
-    /* padding: 10px 10px; */
     position: relative;
   }
   .hamburger span {
@@ -324,7 +322,7 @@ textarea {
   .menushow {
     display: block;
     transition: 0.3s;
-  }
+  } */
   .b-color {
     background: black;
   }

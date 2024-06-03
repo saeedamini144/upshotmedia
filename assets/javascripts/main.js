@@ -1,20 +1,20 @@
 let $ = jQuery.noConflict(); // insteadof using this line we can use jQuery instead of $
 
-var humbergerMenu = document.querySelector(".hamburger");
-var bars = document.querySelectorAll(".bar");
-var nav = document.querySelector(".navbar");
-humbergerMenu.addEventListener("click", showMenu);
-function showMenu() {
-  var menuInMobile = document.querySelector(".menubardiv");
-  var bar1 = document.querySelector(".bar-1");
-  var bar2 = document.querySelector(".bar-2");
-  var bar3 = document.querySelector(".bar-3");
-  bar1.classList.toggle("bar1");
-  bar2.classList.toggle("bar2");
-  bar3.classList.toggle("bar3");
-  menuInMobile.classList.toggle("menushow");
-  nav.classList.toggle("b-color");
-}
+// var humbergerMenu = document.querySelector(".hamburger");
+// var bars = document.querySelectorAll(".bar");
+// var nav = document.querySelector(".navbar");
+// humbergerMenu.addEventListener("click", showMenu);
+// function showMenu() {
+//   var menuInMobile = document.querySelector(".menubardiv");
+//   var bar1 = document.querySelector(".bar-1");
+//   var bar2 = document.querySelector(".bar-2");
+//   var bar3 = document.querySelector(".bar-3");
+//   bar1.classList.toggle("bar1");
+//   bar2.classList.toggle("bar2");
+//   bar3.classList.toggle("bar3");
+//   menuInMobile.classList.toggle("menushow");
+//   nav.classList.toggle("b-color");
+// }
 
 window.onscroll = function () {
   scrollFunction();
@@ -89,4 +89,11 @@ $(document).ready(function () {
 lightbox.option({
   resizeDuration: 200,
   wrapAround: true,
+});
+
+///jquery drilled navbarmenu mibile
+$(document).ready(function () {
+  $(".mobile_menu").simpleMobileMenu({
+    menuStyle: "slide",
+  });
 });

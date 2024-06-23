@@ -91,9 +91,31 @@ lightbox.option({
   wrapAround: true,
 });
 
+// post slider
+$(document).ready(function ($) {
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
+  });
+});
+
 ///jquery drilled navbarmenu mibile
 $(document).ready(function () {
   $(".mobile_menu").simpleMobileMenu({
     menuStyle: "slide",
   });
 });
+
+$(".sub-menu").attr("class", "submenu");

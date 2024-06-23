@@ -190,6 +190,44 @@ $upshotmedia_background_image = upshotmedia_get_option('review_background_image'
         </div>
     </div>
 </section>
+<section class="blogcarosel">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p class="text-center text-light">Our New Blogs</p>
+            </div>
+            <div class="col-12">
+                <div>
+                    <?php
+                    $args = array(
+                        'post_type' => 'post', // Fetch posts
+                        'posts_per_page' => 5, // Number of posts to display
+                    );
+
+                    $query = new WP_Query($args);
+
+                    if ($query->have_posts()) :
+                    ?>
+                        <div class="owl-carousel">
+                            <?php while ($query->have_posts()) : $query->the_post(); ?>
+                                <div class="item">
+                                    <!-- Display post content here -->
+                                    <?php get_template_part('template-parts/post', 'carousel'); ?>
+                                </div>
+                            <?php endwhile; ?>
+                        </div>
+                    <?php
+                        wp_reset_postdata(); // Reset post data query
+                    else :
+                        echo 'No posts found.';
+                    endif;
+                    ?>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 <section class="bg-gradiant sectionheight">
     <div class="container">
         <div class="row align-items-center">

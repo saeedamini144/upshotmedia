@@ -6,15 +6,15 @@ get_header();
         <div class="container">
             <!-- <h1><?php the_archive_title(); ?></h1> show the title with befor -->
             <h1><?php
-                if (is_category()){
+                if (is_category()) {
                     echo 'Categories: ' . single_cat_title();
-                }elseif(is_tag()){
+                } elseif (is_tag()) {
                     // single_tag_title();
                     echo "The Tag archive " . single_tag_title();
-                }elseif(is_day()){
-                    echo'the day archive:' . get_the_date('j F');
+                } elseif (is_day()) {
+                    echo 'the day archive:' . get_the_date('j F');
                 }
-            ?></h1>
+                ?></h1>
             <div>
                 <!-- <span><?php the_time('F j, Y'); ?> </span>
                 <span><?php the_tags("<span> The tags: ", " </span>"); ?></span>
@@ -33,7 +33,7 @@ get_header();
                 // the_content(  );
                 get_template_part('template-parts/content', 'archive');
             }
-            wp_reset_postdata();//After looping through a separate query, this function restores the $post global to the current post in the main query.
+            wp_reset_postdata(); //After looping through a separate query, this function restores the $post global to the current post in the main query.
         }
         ?>
     </div>
@@ -41,7 +41,7 @@ get_header();
     the_posts_pagination(array(
         'mid_size' => 2,
         'prev_text' => __('Previuos Page', 'textdomain'),
-        'next_text' => __('Next Page' , 'textdomain')
+        'next_text' => __('Next Page', 'textdomain')
 
     ));
     ?>
@@ -49,3 +49,24 @@ get_header();
 <?php
 get_footer();
 ?>
+
+<style>
+    .h_iframe-aparat_embed_frame {
+        position: relative;
+    }
+
+    .h_iframe-aparat_embed_frame .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .h_iframe-aparat_embed_frame iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 250px;
+    }
+</style>
+<div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 57%"></span><iframe src="https://www.aparat.com/video/video/embed/videohash/drod404/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe></div>

@@ -40,73 +40,20 @@
                 );
                 wp_nav_menu($menu_args);
                 ?>
-                <!-- <ul class="menubar d-lg-flex">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">App Design</a></li>
-                    <li><a href="#">Website Design</a></li>
-                    <li><a href="#">Graphic Design</a></li>
-                    <li><a href="#">Video Content</a></li>
-                </ul> -->
+
             </div>
             <div class="slideMobileMenu">
-                <ul class="mobile_menu">
-                    <li><a href="#">Home</a></li>
-                    <li>
-                        <a href="#">Category 1</a>
-                        <ul class="submenu">
-                            <li><a href="#">Category 1.1</a></li>
-                            <li>
-                                <a href="#">Category 1.2</a>
-                                <ul class="submenu">
-                                    <li><a href="#">Category 1.2.1</a> </li>
-                                    <li>
-                                        <a href="#">Category 1.2.2</a>
-                                        <ul class="submenu">
-                                            <li><a href="#">Category 1.2.2.1</a></li>
-                                            <li><a href="#">Category 1.2.2.2</a></li>
-                                            <li><a href="#">Category 1.2.2.3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Category 1.2.3</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Category 1.3</a>
-                                <ul class="submenu">
-                                    <li> <a href="#">Category 1.3.1</a> </li>
-                                    <li> <a href="#">Category 1.3.2</a> </li>
-                                    <li> <a href="#">Category 1.3.3</a> </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Category 2</a>
-                        <ul class="submenu">
-                            <li><a href="">Category 2.1</a></li>
-                            <li><a href="">Category 2.2</a></li>
-                            <li><a href="">Category 2.3</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="#">Category 3</a> </li>
-                    <li> <a href="#">Category 4</a> </li>
-                </ul>
+                <?php
+                $menu_mobile = array(
+                    'menu' => 'mobile',
+                    'theme_location' => 'mobile',
+                    'menu_class' => 'mobile_menu',
+                    'depth' => 4,
+                );
+                wp_nav_menu($menu_mobile);
+                ?>
             </div>
-            <!-- <div class="hamburger d-lg-none">
-                <span class="bar-1"></span>
-                <span class="bar-2"></span>
-                <span class="bar-3"></span>
-            </div> -->
+
         </div>
-        <!-- <div class="menubar-text text-center col-12">
-            <h1 class="text-light mb-4">WELCOME TO UPSHOT MEDIA</h1>
-            <h2 class="text-light mb-5">A Technology-Focused Design Agency</h2>
-            <button class="btn btn-outline-light p-2">Contact With Us</button>
-        </div> -->
-        <!-- <div class="container ">
-            <div class="row ">
-                
-            </div>
-        </div> -->
+
     </section>

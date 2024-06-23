@@ -27,6 +27,7 @@ function upshotmedia_register_style()
     wp_enqueue_style('upshotmedia-splide', Address . '/assets/css/splide-skyblue.min.css', array(), "1.0", "all");
     wp_enqueue_style('upshotmedia-lightbox', Address . '/assets/css/lightbox.min.css', array(), '2.0', 'all');
     wp_enqueue_style('upshotmedia-jquery-drilled',  Address . '/assets/css/jquery-simple-mobilemenu-slide.css', array(), '2.0', 'all');
+    wp_enqueue_style('upshotmedia-owl-carousel', Address . '/assets/css/owl.carousel.min.css', array(), '2.3.4', 'all');
 }
 add_action("wp_enqueue_scripts", "upshotmedia_register_style");
 
@@ -41,6 +42,7 @@ function upshotmedia_register_scripts()
     wp_enqueue_script('upshotmedia-splide.min', Address . '/assets/javascripts/splide.min.js', array('jquery'), "1.0", true);
     wp_enqueue_script('upshotmedia-Lightbox', Address . '/assets/javascripts/lightbox.min.js', array('jquery'), '2.0', true);
     wp_enqueue_script('upshotmedia-jquery-drilled', Address . '/assets/javascripts/jquery-simple-mobilemenu.min.js', array('jquery'), '2.0', true);
+    wp_enqueue_script('upshotmedia-owl-carousel', Address . '/assets/javascripts/owl.carousel.min.js', array('jquery'), '2.3.4', true);
     wp_enqueue_script('upshotmedia-mainjs', Address . '/assets/javascripts/main.js', array(), "1.0", true);
 }
 add_action("wp_enqueue_scripts", "upshotmedia_register_scripts");

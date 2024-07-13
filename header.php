@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="wp-content/themes/upshotmedia/assets/css/fontawesome.min.css"> -->
     <!-- <link rel="stylesheet" href="wp-content/themes/upshotmedia/assets/css/animate.min.css"> -->
     <!-- <link rel="stylesheet" href="wp-content/themes/upshotmedia/assets/css/splide-skyblue.min.css"> -->
-    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/upshotmedia/assets/images/upshot-logo-for-favicon-128x128-1.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url') ?>/assets/images/upshot-logo-for-favicon-128x128-1.png">
     <?php
     wp_head();
     ?>

@@ -64,9 +64,10 @@ function upshotmedia_widget_areas()
             'befor_widget' => '',
             'afther_widget' => '',
             'name' => 'sidebar Area',
-            'id' => 'sidbar-1', //css id for the change style
-            'description' => 'sidebar widget area'
-        )
+            'id' => 'Single-post-sidebar', //css id for the change style
+            'description' => 'sidbar of the single post area',
+            'class' => '',
+        ),
     );
 }
 add_action('widgets_init', 'upshotmedia_widget_areas');

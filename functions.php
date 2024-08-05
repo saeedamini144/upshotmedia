@@ -85,31 +85,31 @@ function custom_post_type() {
   
     // Set UI labels for Custom Post Type
         $labels = array(
-            'name'                => _x( 'Movies', 'Post Type General Name', 'twentytwentyone' ),
-            'singular_name'       => _x( 'Movie', 'Post Type Singular Name', 'twentytwentyone' ),
-            'menu_name'           => __( 'Movies', 'twentytwentyone' ),
-            'parent_item_colon'   => __( 'Parent Movie', 'twentytwentyone' ),
-            'all_items'           => __( 'All Movies', 'twentytwentyone' ),
-            'view_item'           => __( 'View Movie', 'twentytwentyone' ),
-            'add_new_item'        => __( 'Add New Movie', 'twentytwentyone' ),
-            'add_new'             => __( 'Add New', 'twentytwentyone' ),
-            'edit_item'           => __( 'Edit Movie', 'twentytwentyone' ),
-            'update_item'         => __( 'Update Movie', 'twentytwentyone' ),
-            'search_items'        => __( 'Search Movie', 'twentytwentyone' ),
-            'not_found'           => __( 'Not Found', 'twentytwentyone' ),
-            'not_found_in_trash'  => __( 'Not found in Trash', 'twentytwentyone' ),
+            'name'                => 'Portfolio',
+            'singular_name'       => 'Portfolio',
+            'menu_name'           => 'Porftolio',
+            'parent_item_colon'   => '',
+            'all_items'           => 'All Portfolio',
+            'view_item'           => 'view portfolio',
+            'add_new_item'        => 'Add new portfolio',
+            'add_new'             => 'Add new',
+            'edit_item'           => 'Edite Portfolio',
+            'update_item'         => 'Update portfolio',
+            'search_items'        => 'Search portfolio',
+            'not_found'           => 'Not found',
+            'not_found_in_trash'  => 'Not found in trash',
         );
           
     // Set other options for Custom Post Type
           
         $args = array(
-            'label'               => __( 'movies', 'twentytwentyone' ),
-            'description'         => __( 'Movie news and reviews', 'twentytwentyone' ),
+            'label'               => 'Portfolio',
+            'description'         => 'The Portfolio of the site',
             'labels'              => $labels,
             // Features this CPT supports in Post Editor
             'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
             // You can associate this CPT with a taxonomy or custom taxonomy. 
-            'taxonomies'          => array( 'genres' ),
+            'taxonomies'          => array( 'category','post_tag' ),
             /* A hierarchical CPT is like Pages and can have
             * Parent and child items. A non-hierarchical CPT
             * is like Posts.
@@ -123,7 +123,7 @@ function custom_post_type() {
             'menu_position'       => 5,
             'can_export'          => true,
             'has_archive'         => true,
-            'exclude_from_search' => false,
+            'exclude_from_search' => true,
             'publicly_queryable'  => true,
             'capability_type'     => 'post',
             'show_in_rest' => true,
@@ -131,7 +131,7 @@ function custom_post_type() {
         );
           
         // Registering your Custom Post Type
-        register_post_type( 'movies', $args );
+        register_post_type( 'Portfolio', $args );
       
     }
       
